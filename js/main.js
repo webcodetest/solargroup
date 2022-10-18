@@ -1,20 +1,26 @@
 // timer
 ;(function () {
-    let timerElem = document.querySelector('.timer');
-    if (!timerElem) return;
+    let timerElems = document.querySelectorAll('.timer');
 
-    let timerDate = timerElem.getAttribute('data-time') || new Date;
-    let countDownDate = new Date(timerDate).getTime();
+    timerElems.forEach(timer => {
+        let timerDate = timer.getAttribute('data-time') || new Date;
+        let countDownDate = new Date(timerDate).getTime();
+        let daySpan = timer.querySelector('.day .number')
+        let hoursSpan = timer.querySelector('.hours .number');
+        let minutesSpan = timer.querySelector('.minutes .number');
+        let secondsSpan = timer.querySelector('.seconds .number');
 
-    const daySpan = document.querySelector('.day .number');
-    const hoursSpan = document.querySelector('.hours .number');
-    const minutesSpan = document.querySelector('.minutes .number');
-    const secondsSpan = document.querySelector('.seconds .number');
+       setInterval(function() {
+            setTimer(daySpan, hoursSpan, minutesSpan, secondsSpan, countDownDate);
+        }, 1000)
+    })
+ 
 
-    const setTimer = () => {
+
+    const setTimer = (day, hr, mt, sd, countDown) => {
         let now = new Date().getTime();
 
-        if(now > countDownDate) {
+        if(now > countDown) {
             // daySpan.textContent = '00';
             // hoursSpan.textContent = '00';
             // minutesSpan.textContent = '00';
@@ -22,25 +28,21 @@
             document.querySelector('.timer').style.opacity = 0;
             return;
         }
-        let timeleft = countDownDate - now;
+        let timeleft = countDown - now;
 
         let days = Math.floor(timeleft / (1000 * 60 * 60 * 24));
         let hours = Math.floor((timeleft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
         let minutes = Math.floor((timeleft % (1000 * 60 * 60)) / (1000 * 60));
         let seconds = Math.floor((timeleft % (1000 * 60)) / 1000);
 
-        daySpan.textContent = `0${days}`.slice(-2);
-        hoursSpan.textContent = `0${hours}`.slice(-2);
-        minutesSpan.textContent = `0${minutes}`.slice(-2);
-        secondsSpan.textContent = `0${seconds}`.slice(-2);
+        day.textContent = `0${days}`.slice(-2);
+        hr.textContent = `0${hours}`.slice(-2);
+        mt.textContent = `0${minutes}`.slice(-2);
+        sd.textContent = `0${seconds}`.slice(-2);
     }
 
-    let timer = setInterval(function() {
-        setTimer();
+   
 
-    }, 1000)
-
-    setTimer();
 })();
 
 
