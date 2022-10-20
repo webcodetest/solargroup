@@ -407,6 +407,7 @@ body, button {
   margin-right: 30px;
   position: relative;
   background: linear-gradient(0deg, #ECF4FF, #ECF4FF);
+  border-radius: 30px;
 }
 .video-block .video .play-btn {
   position: absolute;
