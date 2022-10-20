@@ -580,6 +580,7 @@ body, button {
   line-height: 140%;
   color: #303133;
   padding-left: 20px;
+  margin-bottom: 40px;
 }
 .examples-title b {
   font-weight: 600;
