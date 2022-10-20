@@ -507,7 +507,9 @@ body, button {
 }
 @media (max-width: 768px) {
   .video-block__content p {
-    font-size: 13px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 160%;
   }
 }
 .video-block__content::-webkit-scrollbar {
@@ -1338,6 +1340,13 @@ body, button {
   font-size: 15px;
   line-height: 180%;
   color: #303133;
+  max-height: calc(100vh - 200px);
+  overflow-y: auto;
+}
+.example-popup-wrapper .example-popup-content a {
+  text-decoration: underline;
+  color: #3A75FF;
+  font-weight: 500;
 }
 @media (max-width: 768px) {
   .example-popup-wrapper .example-popup-content {
@@ -1471,6 +1480,11 @@ body, button {
 .small-text {
   padding-top: 33px;
 }
+@media (max-width: 768px) {
+  .small-text {
+    padding-top: 20px;
+  }
+}
 .small-text__inner {
   font-weight: 400;
   font-size: 16px;
@@ -1483,4 +1497,11 @@ body, button {
   text-decoration-style: dashed;
   text-underline-offset: 5px;
   font-weight: 500;
+}
+@media (max-width: 768px) {
+  .small-text__inner {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 160%;
+  }
 }
