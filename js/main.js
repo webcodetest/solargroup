@@ -130,6 +130,11 @@ document.addEventListener('DOMContentLoaded', function(){
             nextEl: '.next-slide',
             prevEl: '.prev-slide',
         },
+
+        autoplay: {
+            delay:3000,
+          },
+
         pagination: {
             el: '.slider-pagination',
             type: 'bullets',
