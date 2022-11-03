@@ -175,8 +175,16 @@ document.addEventListener('DOMContentLoaded', function(){
 
       document.querySelector('.gallery .show-more').addEventListener('click', function(e){
         e.preventDefault();
-        document.querySelector('.gallery__inner__more').classList.add('active');
+        document.querySelector('.gallery__inner').classList.add('all');
         this.remove();
+      })
+
+    
+
+      document.querySelectorAll('.tooltip').forEach(item => {
+        item.addEventListener("click", function(){
+            this.classList.toggle('opened');
+        })
       })
 
    
