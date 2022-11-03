@@ -46,21 +46,37 @@
 })();
 
 
-new Accordion('.accordion-container');
+// new Accordion('.accordion-container');
 
-document.querySelector('.copy-link a').addEventListener('click', function(e){
-    e.preventDefault();
-    this.closest('.copy-link').classList.add('visible');
-    setTimeout(() => {
-        this.closest('.copy-link').classList.remove('visible');
-    }, 2000)
+// document.querySelector('.copy-link a').addEventListener('click', function(e){
+//     e.preventDefault();
+//     this.closest('.copy-link').classList.add('visible');
+//     setTimeout(() => {
+//         this.closest('.copy-link').classList.remove('visible');
+//     }, 2000)
 
-    let copyText = document.querySelector(".copy-input");
+//     let copyText = document.querySelector(".copy-input");
 
-    copyText.select();
+//     copyText.select();
 
-    navigator.clipboard.writeText(copyText.value);
-});
+//     navigator.clipboard.writeText(copyText.value);
+// });
+
+document.querySelectorAll('.copy-link a').forEach(item => {
+    item.addEventListener('click', function(e){
+        e.preventDefault();
+        this.closest('.copy-link').classList.add('visible');
+        setTimeout(() => {
+            this.closest('.copy-link').classList.remove('visible');
+        }, 2000)
+    
+        let copyText = document.querySelector(".copy-input");
+    
+        copyText.select();
+    
+        navigator.clipboard.writeText(copyText.value);
+    });
+})
 
 // video
 ;(function () {
@@ -107,7 +123,7 @@ document.addEventListener('DOMContentLoaded', function(){
         slidesPerView: 2,
         slidesPerGroup: 2,
         speed: 400,
-        spaceBetween: 35,
+        spaceBetween: 65,
         wrapperClass: 'examples__slider-wrapper',
         slideClass: 'examples__slide',
         navigation: {
@@ -156,6 +172,12 @@ document.addEventListener('DOMContentLoaded', function(){
       })
       
   
+
+      document.querySelector('.gallery .show-more').addEventListener('click', function(e){
+        e.preventDefault();
+        document.querySelector('.gallery__inner__more').classList.add('active');
+        this.remove();
+      })
 
    
 })
