@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lottery regular</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha512-H9jrZiiopUdsLpg94A333EfumgUBpO9MdbxStdeITo+KEIMaNfHNvwyjjDJb+ERPaRS6DpyRlKbvPUasNItRyw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://unpkg.com/accordion-js@3.3.0/dist/accordion.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic" rel="stylesheet" />
+    <link rel="stylesheet" href="css/main.css">
+    <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+/>
+</head>
+<body>
+    <div class="page-container lottery">
+        <div class="main-screen">
+            <div class="container">
+                <div class="main-screen__inner">
+                    <div class="main-screen__content">
+            
+
+
+                    
+                        <!-- <div class="bonus-count bonus-count-closed">Акция завершена</div> -->
+
+                        <div class="timer" data-time="2022-12-09">
+
+                            <div class="day">
+                                 <span class="number">09</span>
+                                 <span class="title">ДНИ</span>
+                            </div>
+ 
+ 
+                            <svg width="4" height="11" viewBox="0 0 4 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                             <g opacity="0.4">
+                             <path d="M2 4C3.10457 4 4 3.10457 4 2C4 0.89543 3.10457 0 2 0C0.89543 0 0 0.89543 0 2C0 3.10457 0.89543 4 2 4Z" fill="#303133"></path>
+                             <path d="M2 11C3.10457 11 4 10.1046 4 9C4 7.89543 3.10457 7 2 7C0.89543 7 0 7.89543 0 9C0 10.1046 0.89543 11 2 11Z" fill="#303133"></path>
+                             </g>
+                             </svg>
+ 
+                             
+ 
+                             <div class="hours">
+                                 <span class="number">08</span>
+                                 <span class="title">ЧАСЫ</span>
+                             </div>
+ 
+ 
+                             <svg width="4" height="11" viewBox="0 0 4 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                 <g opacity="0.4">
+                                 <path d="M2 4C3.10457 4 4 3.10457 4 2C4 0.89543 3.10457 0 2 0C0.89543 0 0 0.89543 0 2C0 3.10457 0.89543 4 2 4Z" fill="#303133"></path>
+                                 <path d="M2 11C3.10457 11 4 10.1046 4 9C4 7.89543 3.10457 7 2 7C0.89543 7 0 7.89543 0 9C0 10.1046 0.89543 11 2 11Z" fill="#303133"></path>
+                                 </g>
+                                 </svg>
+                                 
+ 
+ 
+                             <div class="minutes">
+                                 <span class="number">29</span>
+                                 <span class="title">МИН</span>
+                             </div>
+ 
+ 
+                             <svg width="4" height="11" viewBox="0 0 4 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                 <g opacity="0.4">
+                                 <path d="M2 4C3.10457 4 4 3.10457 4 2C4 0.89543 3.10457 0 2 0C0.89543 0 0 0.89543 0 2C0 3.10457 0.89543 4 2 4Z" fill="#303133"></path>
+                                 <path d="M2 11C3.10457 11 4 10.1046 4 9C4 7.89543 3.10457 7 2 7C0.89543 7 0 7.89543 0 9C0 10.1046 0.89543 11 2 11Z" fill="#303133"></path>
+                                 </g>
+                                 </svg>
+                                 
+ 
+ 
+                             <div class="seconds">
+                                 <span class="number">15</span>
+                                 <span class="title">СЕК </span>
+                             </div>
+                         </div>
+                  
+                        <h1 class="title">Разыгрываем <br> инвестиционные пакеты <br> на сумму 25 000 $
+                        </h1>
+
+                        <div class="ref-btns">
+                            <a href="" class="yellow-btn">
+                                Инвестировать
+                            </a>
+                            <div class="copy-link">
+                                <a href=""  class="ref-link">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M15.104 5.5032C15.3254 5.27398 15.5902 5.09114 15.883 4.96536C16.1758 4.83958 16.4907 4.77337 16.8094 4.7706C17.1281 4.76783 17.4441 4.82856 17.7391 4.94923C18.034 5.0699 18.302 5.24811 18.5273 5.47345C18.7527 5.6988 18.9309 5.96676 19.0516 6.26171C19.1722 6.55666 19.233 6.87269 19.2302 7.19136C19.2274 7.51004 19.1612 7.82496 19.0354 8.11777C18.9096 8.41058 18.7268 8.67541 18.4976 8.8968L14.8976 12.4968C14.4475 12.9467 13.8372 13.1995 13.2008 13.1995C12.5644 13.1995 11.954 12.9467 11.504 12.4968C11.2777 12.2782 10.9745 12.1573 10.6599 12.16C10.3453 12.1627 10.0443 12.2889 9.8218 12.5114C9.59931 12.7339 9.47311 13.0349 9.47037 13.3495C9.46764 13.6642 9.58859 13.9673 9.80718 14.1936C10.7073 15.0935 11.928 15.599 13.2008 15.599C14.4736 15.599 15.6942 15.0935 16.5944 14.1936L20.1944 10.5936C21.0687 9.68831 21.5526 8.47582 21.5416 7.21728C21.5307 5.95873 21.0259 4.75483 20.1359 3.86487C19.246 2.97491 18.0421 2.4701 16.7835 2.45917C15.525 2.44823 14.3125 2.93204 13.4072 3.8064L11.6072 5.6064C11.4926 5.7171 11.4011 5.84951 11.3383 5.99592C11.2754 6.14232 11.2423 6.29978 11.2409 6.45912C11.2395 6.61846 11.2699 6.77647 11.3302 6.92395C11.3905 7.07142 11.4796 7.2054 11.5923 7.31808C11.705 7.43075 11.839 7.51985 11.9864 7.58019C12.1339 7.64052 12.2919 7.67089 12.4513 7.6695C12.6106 7.66812 12.7681 7.63501 12.9145 7.57212C13.0609 7.50923 13.1933 7.41781 13.304 7.3032L15.104 5.5032ZM9.10398 11.5032C9.55405 11.0533 10.1644 10.8005 10.8008 10.8005C11.4372 10.8005 12.0475 11.0533 12.4976 11.5032C12.6083 11.6178 12.7407 11.7092 12.8871 11.7721C13.0335 11.835 13.191 11.8681 13.3503 11.8695C13.5096 11.8709 13.6676 11.8405 13.8151 11.7802C13.9626 11.7199 14.0966 11.6307 14.2093 11.5181C14.3219 11.4054 14.411 11.2714 14.4714 11.1239C14.5317 10.9765 14.5621 10.8185 14.5607 10.6591C14.5593 10.4998 14.5262 10.3423 14.4633 10.1959C14.4004 10.0495 14.309 9.9171 14.1944 9.8064C13.2942 8.90654 12.0736 8.40103 10.8008 8.40103C9.52799 8.40103 8.30731 8.90654 7.40718 9.8064L3.80718 13.4064C3.34873 13.8492 2.98306 14.3788 2.73149 14.9645C2.47993 15.5501 2.34752 16.1799 2.34198 16.8173C2.33644 17.4546 2.45789 18.0867 2.69924 18.6766C2.94058 19.2665 3.297 19.8024 3.74768 20.2531C4.19837 20.7038 4.7343 21.0602 5.3242 21.3015C5.9141 21.5429 6.54617 21.6643 7.18351 21.6588C7.82085 21.6533 8.4507 21.5209 9.03632 21.2693C9.62194 21.0177 10.1516 20.6521 10.5944 20.1936L12.3944 18.3936C12.509 18.2829 12.6004 18.1505 12.6633 18.0041C12.7262 17.8577 12.7593 17.7002 12.7607 17.5409C12.7621 17.3815 12.7317 17.2235 12.6714 17.0761C12.611 16.9286 12.5219 16.7946 12.4093 16.6819C12.2966 16.5693 12.1626 16.4802 12.0151 16.4198C11.8677 16.3595 11.7096 16.3291 11.5503 16.3305C11.391 16.3319 11.2335 16.365 11.0871 16.4279C10.9407 16.4908 10.8083 16.5822 10.6976 16.6968L8.89758 18.4968C8.67619 18.726 8.41136 18.9089 8.11855 19.0346C7.82574 19.1604 7.51081 19.2266 7.19214 19.2294C6.87347 19.2322 6.55744 19.1714 6.26249 19.0508C5.96754 18.9301 5.69958 18.7519 5.47423 18.5266C5.24889 18.3012 5.07068 18.0332 4.95001 17.7383C4.82933 17.4433 4.76861 17.1273 4.77138 16.8086C4.77415 16.49 4.84036 16.175 4.96614 15.8822C5.09192 15.5894 5.27476 15.3246 5.50398 15.1032L9.10398 11.5032Z" fill="#3A75FF"/>
+                                        </svg>
+                                        <span >Поделиться</span>
+                                </a>
+                                <input type="hidden" class="copy-input" value="https://google.com">
+                            </div>
+                        </div>
+
+                    </div>
+    
+                    <div class="main-screen__img">
+                        <picture>
+                          <source media="(max-width:768px)" srcset="img/main-screen-2-mob.svg">
+                          <img src="img/main-screen-2.svg" alt="Дадим тепло в ПКТБ «Совэлмаш»">
+                        </picture>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="banner-description">
+            <div class="container">
+                <div class="banner-description-inner">
+                    <b>Каждый раз, когда сумма ваших фактических платежей по инвестиционному пакету достигает 250 $, вы получаете 1 купон на участие в лотерее.</b> Поэтому чем больше платежей вы совершите, тем больше купонов получите, увеличивая свои шансы на победу. <br> <b>Число купонов не ограничено!</b>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="bonus">
+            <div class="container">
+                <h2 class="bonus-title h2-title">
+                  <b>Как принять участие</b> в лотерее
+                </h2>
+                <div class="bonus__inner">
+                    <div class="bonus__item">
+                        <h3 class="bonus__item-title">
+                            <i>
+                                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M17.7804 2.7474C18.3098 2.93637 18.6632 3.43776 18.6632 3.99986V12.0033H26.6666C27.1805 12.0033 27.6484 12.2994 27.8684 12.7637C28.0884 13.2281 28.0213 13.7776 27.6959 14.1753L15.6959 28.842C15.34 29.277 14.7489 29.4413 14.2196 29.2523C13.6902 29.0634 13.3368 28.562 13.3368 27.9999V19.9964H5.3333C4.81945 19.9964 4.35158 19.7004 4.13154 19.236C3.91149 18.7717 3.97865 18.2221 4.30404 17.8244L16.304 3.15774C16.66 2.7227 17.251 2.55843 17.7804 2.7474ZM8.13965 17.3367H14.6666C15.4011 17.3367 15.9965 17.9321 15.9965 18.6665V24.2744L23.8603 14.6631H17.3333C16.5988 14.6631 16.0034 14.0677 16.0034 13.3332V7.72537L8.13965 17.3367Z" fill="#63CE50"/>
+                                </svg>
+                            </i>
+                            Оформляйте новые инвестиционные пакеты
+                        </h3>
+
+                        <div class="bonus__item-text">
+                            <p>Оформите любой новый ивестиционный пакет в период действия акции и получите по одному купону за каждые 250 $, которые вы внесли в счёт оплаты пакета.
+                                <a href="" class="example-link" data-popup="1">Посмотреть пример</a>
+                            </p>
+                            
+                        </div>
+                    </div>
+
+                    <div class="bonus__item">
+                        <h3 class="bonus__item-title">
+                            <i>
+                                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M17.7804 2.7474C18.3098 2.93637 18.6632 3.43776 18.6632 3.99986V12.0033H26.6666C27.1805 12.0033 27.6484 12.2994 27.8684 12.7637C28.0884 13.2281 28.0213 13.7776 27.6959 14.1753L15.6959 28.842C15.34 29.277 14.7489 29.4413 14.2196 29.2523C13.6902 29.0634 13.3368 28.562 13.3368 27.9999V19.9964H5.3333C4.81945 19.9964 4.35158 19.7004 4.13154 19.236C3.91149 18.7717 3.97865 18.2221 4.30404 17.8244L16.304 3.15774C16.66 2.7227 17.251 2.55843 17.7804 2.7474ZM8.13965 17.3367H14.6666C15.4011 17.3367 15.9965 17.9321 15.9965 18.6665V24.2744L23.8603 14.6631H17.3333C16.5988 14.6631 16.0034 14.0677 16.0034 13.3332V7.72537L8.13965 17.3367Z" fill="#63CE50"/>
+                                </svg>
+                            </i>
+                            Погашайте досрочно активную рассрочку
+                        </h3>
+
+                        <div class="bonus__item-text">
+                            <p>Погасите досрочно, полностью или частично, вашу активную рассрочку, и получите по одному купону за каждые 250 $, которые вы внесли в счёт досрочного погашения.
+                                <a href="" class="example-link" data-popup="2">Посмотреть пример</a>
+                            </p>
+                            
+                        </div>
+                    </div>
+
+                    <div class="bonus__item">
+                        <h3 class="bonus__item-title">
+                            <i>
+                                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M17.7804 2.7474C18.3098 2.93637 18.6632 3.43776 18.6632 3.99986V12.0033H26.6666C27.1805 12.0033 27.6484 12.2994 27.8684 12.7637C28.0884 13.2281 28.0213 13.7776 27.6959 14.1753L15.6959 28.842C15.34 29.277 14.7489 29.4413 14.2196 29.2523C13.6902 29.0634 13.3368 28.562 13.3368 27.9999V19.9964H5.3333C4.81945 19.9964 4.35158 19.7004 4.13154 19.236C3.91149 18.7717 3.97865 18.2221 4.30404 17.8244L16.304 3.15774C16.66 2.7227 17.251 2.55843 17.7804 2.7474ZM8.13965 17.3367H14.6666C15.4011 17.3367 15.9965 17.9321 15.9965 18.6665V24.2744L23.8603 14.6631H17.3333C16.5988 14.6631 16.0034 14.0677 16.0034 13.3332V7.72537L8.13965 17.3367Z" fill="#63CE50"/>
+                                </svg>
+                            </i>
+                            Восстанавливайте отменённые пакеты
+                        </h3>
+
+                        <div class="bonus__item-text">
+                            <p>Восстановите свой отменённый пакет, внеся необходимое количество платежей, и получите по одному купону за каждые 250$ фактических платежей.
+                                <a href="" class="example-link" data-popup="3">Посмотреть пример</a>
+                            </p>
+                            
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+<div class="examples">
+            <div class="container">
+                <h2 class="examples-title">
+                 <b>Примеры  вашей выгоды</b> в цифрах
+                </h2>
+                <div class="examples-slider">
+                    <div class="examples__slider-wrapper">
+
+                        <div class="examples__slide">
+                            <div class="examples-item">
+                                <div class="examples-item-title">
+                                    При покупке нового <br> инвестиционного пакета
+                                </div>
+                                <p>В период проведения лотереи вы приобрели новый инвестиционный пакет номиналом 1 000 $ и полностью оплатили его. Так как за каждые 250 $ фактических платежей мы дарим 1 купон, то вы получили 4 купона и, соотвественно, стали участником розыгрыша.</p>
+                            </div>
+                        </div>
+    
+    
+                        <div class="examples__slide">
+                            <div class="examples-item">
+                                <div class="examples-item-title">
+                                    При досрочном погашении <br> рассрочки
+                                </div>
+                                <p>Вы оплачиваете пакет номиналом 5 000 $, который приобрели в рассрочку на 20 месяцев. Вам осталось оплатить последние 3 месяца, и вы решили в рамках проведения лотереи погасить их досрочно, внеся платёж на сумму 750 $. Согласно условиям лотереи вы получили 3 купона и стали участником розыгрыша.</p>
+                            </div>
+                        </div>
+
+
+
+                    </div>
+
+                    <div class="examples-slider-nav">
+                        <div class="prev-slide">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M15 19L8 12L15 5" stroke="#A0B6D1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                                
+                        </div>
+                        <div class="slider-pagination"></div>
+                        <div class="next-slide">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9 5L16 12L9 19" stroke="#A0B6D1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+               
+            </div>
+        </div>
+<!--         <div class="examples">
+            <div class="container">
+                <h2 class="examples-title h2-title">
+                 <b>Примеры </b>получения купонов
+                </h2>
+                <div class="examples-row">
+                    <div class="examples-item">
+                        <div class="examples-item-title">
+                            При покупке нового <br> инвестиционного пакета
+                        </div>
+                        <p>В период проведения лотереи вы приобрели новый инвестиционный пакет номиналом 1 000 $ и полностью оплатили его. Так как за каждые 250 $ фактических платежей мы дарим 1 купон, то вы получили 4 купона и, соотвественно, стали участником розыгрыша.</p>
+                    </div>
+                    <div class="examples-item">
+                        <div class="examples-item-title">
+                            При досрочном погашении <br> рассрочки
+                        </div>
+                        <p>Вы оплачиваете пакет номиналом 5 000 $, который приобрели в рассрочку на 20 месяцев. Вам осталось оплатить последние 3 месяца, и вы решили в рамках проведения лотереи погасить их досрочно, внеся платёж на сумму 750 $. Согласно условиям лотереи вы получили 3 купона и стали участником розыгрыша.</p>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+
+        <div class="bar-block">
+            <div class="container">
+                <h2 class="bar-title h2-title">
+                    <b>Накапливать</b> купоны можно в период <b>с 1 декабря по 25 декабря</b>
+                </h2>
+                <p class="bar-text">После этого новые купоны начисляться не будут.</p>
+                <div class="bar-line">
+                    <div class="bar-progress" style="width: 60%;">
+                        <div class="bar-time">Осталось 7 дней</div>
+                    </div>
+                </div>
+                <div class="bar-dates">
+                    <p class="bar-text">1 декабря</p>
+                    <p class="bar-text">25 декабря</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="coupons">
+            <div class="container">
+                <h2 class="coupons-title h2-title">
+                    Мои купоны
+                </h2>
+                <div class="coupons-row">
+                    <div class="coupons-item">
+                        <div class="coupons-item-content">
+                            <p class="coupons-text">Купонов получено: </p>
+                            <div class="coupons-val">
+                                1
+                            </div>
+                        </div>
+                    </div>
+                    <div class="coupons-item">
+                        <div class="coupons-item-content">
+                            <p class="coupons-text">До следующего купона осталось:</p>
+                            <div class="coupons-val">
+                                250<span>$</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="prizes">
+            <div class="container">
+                <h2 class="prizes-title h2-title">
+                    <b>Призовые</b> пакеты
+                </h2>
+                <p class="prizes-text">
+                    Выиграй главный приз лотереи — инвестиционный пакет на 15 000 $ или один из десяти пакетов на 1 000 $.
+                </p>
+                <div class="prizes-row">
+                    <div class="prizes-big-image">
+                        <img src="img/prize-box.svg" alt="">
+                    </div>
+                    <div class="prizes-small-images">
+                        <picture>
+                          <source media="(max-width:768px)" srcset="img/prize-boxes-mob.svg">
+                          <img src="img/prize-boxes.svg" alt="">
+                        </picture>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="lottery-timer">
+            <div class="container">
+                <div class="lottery-row">
+                    <div class="lottery-left">
+                        <h2 class="lottery-title h2-title">
+                            <b>До розыгрыша осталось</b>
+                        </h2>
+                        <div class="lottery-text">
+                            <p>
+                                Розыгрыш призовых пакетов состоится 26 декабря, вы сможете наблюдать за ним в режиме реального времени или посмотреть результаты позже на этой странице.
+                            </p>
+                            <span class="lottery-link lottery-link-desktop">Розыгрыш здесь</span>
+                        </div>
+                    </div>
+                    <div class="lottery-right">
+                        <div class="lottery-timer-container">
+                            <div class="timer" data-time="2022-12-09">
+
+                            <div class="day">
+                                 <span class="number">09</span>
+                                 <span class="title">ДНИ</span>
+                            </div>
+ 
+ 
+                            <svg width="4" height="11" viewBox="0 0 4 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                             <g opacity="0.4">
+                             <path d="M2 4C3.10457 4 4 3.10457 4 2C4 0.89543 3.10457 0 2 0C0.89543 0 0 0.89543 0 2C0 3.10457 0.89543 4 2 4Z" fill="#303133"></path>
+                             <path d="M2 11C3.10457 11 4 10.1046 4 9C4 7.89543 3.10457 7 2 7C0.89543 7 0 7.89543 0 9C0 10.1046 0.89543 11 2 11Z" fill="#303133"></path>
+                             </g>
+                             </svg>
+ 
+                             
+ 
+                             <div class="hours">
+                                 <span class="number">08</span>
+                                 <span class="title">ЧАСЫ</span>
+                             </div>
+ 
+ 
+                             <svg width="4" height="11" viewBox="0 0 4 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                 <g opacity="0.4">
+                                 <path d="M2 4C3.10457 4 4 3.10457 4 2C4 0.89543 3.10457 0 2 0C0.89543 0 0 0.89543 0 2C0 3.10457 0.89543 4 2 4Z" fill="#303133"></path>
+                                 <path d="M2 11C3.10457 11 4 10.1046 4 9C4 7.89543 3.10457 7 2 7C0.89543 7 0 7.89543 0 9C0 10.1046 0.89543 11 2 11Z" fill="#303133"></path>
+                                 </g>
+                                 </svg>
+                                 
+ 
+ 
+                             <div class="minutes">
+                                 <span class="number">29</span>
+                                 <span class="title">МИН</span>
+                             </div>
+ 
+ 
+                             <svg width="4" height="11" viewBox="0 0 4 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                 <g opacity="0.4">
+                                 <path d="M2 4C3.10457 4 4 3.10457 4 2C4 0.89543 3.10457 0 2 0C0.89543 0 0 0.89543 0 2C0 3.10457 0.89543 4 2 4Z" fill="#303133"></path>
+                                 <path d="M2 11C3.10457 11 4 10.1046 4 9C4 7.89543 3.10457 7 2 7C0.89543 7 0 7.89543 0 9C0 10.1046 0.89543 11 2 11Z" fill="#303133"></path>
+                                 </g>
+                                 </svg>
+                                 
+ 
+ 
+                             <div class="seconds">
+                                 <span class="number">15</span>
+                                 <span class="title">СЕК </span>
+                             </div>
+                         </div>
+                        </div>
+                    </div>
+                    <a href="#" class="lottery-link lottery-link-mobile">Розыгрыш здесь</a>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="member-list">
+            <div class="container">
+              <div class="member-list-title-row">
+                  <h2 class="member-list-title h2-title">Список участников</h2>
+                  <div class="member-list-info">
+                      <div class="member-list-info-count">
+                          Участвует купонов: <b>2 988</b>
+                      </div>
+                      <div class="member-list-info-coupons">
+                          Моих купонов: <b>1</b>
+                      </div>
+                  </div>
+              </div>
+              <div class="member-list-row">
+                  <div class="member-list-item">
+                      <div class="member-list-name">Константин К <span>Это вы</span></div>
+                      <div class="member-list-region">
+                          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_1630_2981)">
+                                <path d="M4.54545 2H15.4545C16.6601 2 17.8162 2.46825 18.6687 3.30175C19.5211 4.13524 20 5.2657 20 6.44444V7.33333H4.76837e-07V6.44444C4.76837e-07 5.2657 0.478895 4.13524 1.33133 3.30175C2.18377 2.46825 3.33993 2 4.54545 2V2Z" fill="#F7F7F7"/>
+                                <path d="M15.4545 18L4.54545 18C3.33992 18 2.18377 17.5317 1.33133 16.6983C0.478893 15.8648 0 14.7343 0 13.5556V12.6667L20 12.6667V13.5556C20 14.7343 19.5211 15.8648 18.6687 16.6983C17.8162 17.5317 16.6601 18 15.4545 18V18Z" fill="#CE2A1D"/>
+                                <path d="M20 7.33337H4.76837e-07V12.6667H20V7.33337Z" fill="#0037A1"/>
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_1630_2981">
+                                    <rect width="20" height="16" fill="white" transform="translate(0 2)"/>
+                                </clipPath>
+                            </defs>
+                        </svg>
+                        Россия
+                      </div>
+                  </div>
+                  <div class="member-list-item">
+                      <div class="member-list-name">Константин К</div>
+                      <div class="member-list-region">
+                          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_1630_2981)">
+                                <path d="M4.54545 2H15.4545C16.6601 2 17.8162 2.46825 18.6687 3.30175C19.5211 4.13524 20 5.2657 20 6.44444V7.33333H4.76837e-07V6.44444C4.76837e-07 5.2657 0.478895 4.13524 1.33133 3.30175C2.18377 2.46825 3.33993 2 4.54545 2V2Z" fill="#F7F7F7"/>
+                                <path d="M15.4545 18L4.54545 18C3.33992 18 2.18377 17.5317 1.33133 16.6983C0.478893 15.8648 0 14.7343 0 13.5556V12.6667L20 12.6667V13.5556C20 14.7343 19.5211 15.8648 18.6687 16.6983C17.8162 17.5317 16.6601 18 15.4545 18V18Z" fill="#CE2A1D"/>
+                                <path d="M20 7.33337H4.76837e-07V12.6667H20V7.33337Z" fill="#0037A1"/>
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_1630_2981">
+                                    <rect width="20" height="16" fill="white" transform="translate(0 2)"/>
+                                </clipPath>
+                            </defs>
+                        </svg>
+                        Россия
+                      </div>
+                  </div>
+                  <div class="member-list-item">
+                      <div class="member-list-name">Иван П</div>
+                      <div class="member-list-region">
+                          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_1630_2981)">
+                                <path d="M4.54545 2H15.4545C16.6601 2 17.8162 2.46825 18.6687 3.30175C19.5211 4.13524 20 5.2657 20 6.44444V7.33333H4.76837e-07V6.44444C4.76837e-07 5.2657 0.478895 4.13524 1.33133 3.30175C2.18377 2.46825 3.33993 2 4.54545 2V2Z" fill="#F7F7F7"/>
+                                <path d="M15.4545 18L4.54545 18C3.33992 18 2.18377 17.5317 1.33133 16.6983C0.478893 15.8648 0 14.7343 0 13.5556V12.6667L20 12.6667V13.5556C20 14.7343 19.5211 15.8648 18.6687 16.6983C17.8162 17.5317 16.6601 18 15.4545 18V18Z" fill="#CE2A1D"/>
+                                <path d="M20 7.33337H4.76837e-07V12.6667H20V7.33337Z" fill="#0037A1"/>
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_1630_2981">
+                                    <rect width="20" height="16" fill="white" transform="translate(0 2)"/>
+                                </clipPath>
+                            </defs>
+                        </svg>
+                        Казахстан
+                      </div>
+                  </div>
+                  <div class="member-list-item">
+                      <div class="member-list-name">Иван П</div>
+                      <div class="member-list-region">
+                          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_1630_2981)">
+                                <path d="M4.54545 2H15.4545C16.6601 2 17.8162 2.46825 18.6687 3.30175C19.5211 4.13524 20 5.2657 20 6.44444V7.33333H4.76837e-07V6.44444C4.76837e-07 5.2657 0.478895 4.13524 1.33133 3.30175C2.18377 2.46825 3.33993 2 4.54545 2V2Z" fill="#F7F7F7"/>
+                                <path d="M15.4545 18L4.54545 18C3.33992 18 2.18377 17.5317 1.33133 16.6983C0.478893 15.8648 0 14.7343 0 13.5556V12.6667L20 12.6667V13.5556C20 14.7343 19.5211 15.8648 18.6687 16.6983C17.8162 17.5317 16.6601 18 15.4545 18V18Z" fill="#CE2A1D"/>
+                                <path d="M20 7.33337H4.76837e-07V12.6667H20V7.33337Z" fill="#0037A1"/>
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_1630_2981">
+                                    <rect width="20" height="16" fill="white" transform="translate(0 2)"/>
+                                </clipPath>
+                            </defs>
+                        </svg>
+                        Казахстан
+                      </div>
+                  </div>
+                  <div class="member-list-item">
+                      <div class="member-list-name">Константин К</div>
+                      <div class="member-list-region">
+                          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_1630_2981)">
+                                <path d="M4.54545 2H15.4545C16.6601 2 17.8162 2.46825 18.6687 3.30175C19.5211 4.13524 20 5.2657 20 6.44444V7.33333H4.76837e-07V6.44444C4.76837e-07 5.2657 0.478895 4.13524 1.33133 3.30175C2.18377 2.46825 3.33993 2 4.54545 2V2Z" fill="#F7F7F7"/>
+                                <path d="M15.4545 18L4.54545 18C3.33992 18 2.18377 17.5317 1.33133 16.6983C0.478893 15.8648 0 14.7343 0 13.5556V12.6667L20 12.6667V13.5556C20 14.7343 19.5211 15.8648 18.6687 16.6983C17.8162 17.5317 16.6601 18 15.4545 18V18Z" fill="#CE2A1D"/>
+                                <path d="M20 7.33337H4.76837e-07V12.6667H20V7.33337Z" fill="#0037A1"/>
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_1630_2981">
+                                    <rect width="20" height="16" fill="white" transform="translate(0 2)"/>
+                                </clipPath>
+                            </defs>
+                        </svg>
+                        Россия
+                      </div>
+                  </div>
+                  <div class="member-list-item">
+                      <div class="member-list-name">Константин К</div>
+                      <div class="member-list-region">
+                          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_1630_2981)">
+                                <path d="M4.54545 2H15.4545C16.6601 2 17.8162 2.46825 18.6687 3.30175C19.5211 4.13524 20 5.2657 20 6.44444V7.33333H4.76837e-07V6.44444C4.76837e-07 5.2657 0.478895 4.13524 1.33133 3.30175C2.18377 2.46825 3.33993 2 4.54545 2V2Z" fill="#F7F7F7"/>
+                                <path d="M15.4545 18L4.54545 18C3.33992 18 2.18377 17.5317 1.33133 16.6983C0.478893 15.8648 0 14.7343 0 13.5556V12.6667L20 12.6667V13.5556C20 14.7343 19.5211 15.8648 18.6687 16.6983C17.8162 17.5317 16.6601 18 15.4545 18V18Z" fill="#CE2A1D"/>
+                                <path d="M20 7.33337H4.76837e-07V12.6667H20V7.33337Z" fill="#0037A1"/>
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_1630_2981">
+                                    <rect width="20" height="16" fill="white" transform="translate(0 2)"/>
+                                </clipPath>
+                            </defs>
+                        </svg>
+                        Россия
+                      </div>
+                  </div>
+                  <div class="member-list-item">
+                      <div class="member-list-name">Иван П</div>
+                      <div class="member-list-region">
+                          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_1630_2981)">
+                                <path d="M4.54545 2H15.4545C16.6601 2 17.8162 2.46825 18.6687 3.30175C19.5211 4.13524 20 5.2657 20 6.44444V7.33333H4.76837e-07V6.44444C4.76837e-07 5.2657 0.478895 4.13524 1.33133 3.30175C2.18377 2.46825 3.33993 2 4.54545 2V2Z" fill="#F7F7F7"/>
+                                <path d="M15.4545 18L4.54545 18C3.33992 18 2.18377 17.5317 1.33133 16.6983C0.478893 15.8648 0 14.7343 0 13.5556V12.6667L20 12.6667V13.5556C20 14.7343 19.5211 15.8648 18.6687 16.6983C17.8162 17.5317 16.6601 18 15.4545 18V18Z" fill="#CE2A1D"/>
+                                <path d="M20 7.33337H4.76837e-07V12.6667H20V7.33337Z" fill="#0037A1"/>
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_1630_2981">
+                                    <rect width="20" height="16" fill="white" transform="translate(0 2)"/>
+                                </clipPath>
+                            </defs>
+                        </svg>
+                        Россия
+                      </div>
+                  </div>
+                  <div class="member-list-item">
+                      <div class="member-list-name">Иван П</div>
+                      <div class="member-list-region">
+                          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_1630_2981)">
+                                <path d="M4.54545 2H15.4545C16.6601 2 17.8162 2.46825 18.6687 3.30175C19.5211 4.13524 20 5.2657 20 6.44444V7.33333H4.76837e-07V6.44444C4.76837e-07 5.2657 0.478895 4.13524 1.33133 3.30175C2.18377 2.46825 3.33993 2 4.54545 2V2Z" fill="#F7F7F7"/>
+                                <path d="M15.4545 18L4.54545 18C3.33992 18 2.18377 17.5317 1.33133 16.6983C0.478893 15.8648 0 14.7343 0 13.5556V12.6667L20 12.6667V13.5556C20 14.7343 19.5211 15.8648 18.6687 16.6983C17.8162 17.5317 16.6601 18 15.4545 18V18Z" fill="#CE2A1D"/>
+                                <path d="M20 7.33337H4.76837e-07V12.6667H20V7.33337Z" fill="#0037A1"/>
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_1630_2981">
+                                    <rect width="20" height="16" fill="white" transform="translate(0 2)"/>
+                                </clipPath>
+                            </defs>
+                        </svg>
+                        Россия
+                      </div>
+                  </div>
+                  <div class="member-list-item">
+                      <div class="member-list-name">Константин К</div>
+                      <div class="member-list-region">
+                          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_1630_2981)">
+                                <path d="M4.54545 2H15.4545C16.6601 2 17.8162 2.46825 18.6687 3.30175C19.5211 4.13524 20 5.2657 20 6.44444V7.33333H4.76837e-07V6.44444C4.76837e-07 5.2657 0.478895 4.13524 1.33133 3.30175C2.18377 2.46825 3.33993 2 4.54545 2V2Z" fill="#F7F7F7"/>
+                                <path d="M15.4545 18L4.54545 18C3.33992 18 2.18377 17.5317 1.33133 16.6983C0.478893 15.8648 0 14.7343 0 13.5556V12.6667L20 12.6667V13.5556C20 14.7343 19.5211 15.8648 18.6687 16.6983C17.8162 17.5317 16.6601 18 15.4545 18V18Z" fill="#CE2A1D"/>
+                                <path d="M20 7.33337H4.76837e-07V12.6667H20V7.33337Z" fill="#0037A1"/>
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_1630_2981">
+                                    <rect width="20" height="16" fill="white" transform="translate(0 2)"/>
+                                </clipPath>
+                            </defs>
+                        </svg>
+                        Россия
+                      </div>
+                  </div>
+                  <div class="member-list-item">
+                      <div class="member-list-name">Константин К</div>
+                      <div class="member-list-region">
+                          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_1630_2981)">
+                                <path d="M4.54545 2H15.4545C16.6601 2 17.8162 2.46825 18.6687 3.30175C19.5211 4.13524 20 5.2657 20 6.44444V7.33333H4.76837e-07V6.44444C4.76837e-07 5.2657 0.478895 4.13524 1.33133 3.30175C2.18377 2.46825 3.33993 2 4.54545 2V2Z" fill="#F7F7F7"/>
+                                <path d="M15.4545 18L4.54545 18C3.33992 18 2.18377 17.5317 1.33133 16.6983C0.478893 15.8648 0 14.7343 0 13.5556V12.6667L20 12.6667V13.5556C20 14.7343 19.5211 15.8648 18.6687 16.6983C17.8162 17.5317 16.6601 18 15.4545 18V18Z" fill="#CE2A1D"/>
+                                <path d="M20 7.33337H4.76837e-07V12.6667H20V7.33337Z" fill="#0037A1"/>
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_1630_2981">
+                                    <rect width="20" height="16" fill="white" transform="translate(0 2)"/>
+                                </clipPath>
+                            </defs>
+                        </svg>
+                        Россия
+                      </div>
+                  </div>
+                  <div class="member-list-item">
+                      <div class="member-list-name">Иван П</div>
+                      <div class="member-list-region">
+                          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_1630_2981)">
+                                <path d="M4.54545 2H15.4545C16.6601 2 17.8162 2.46825 18.6687 3.30175C19.5211 4.13524 20 5.2657 20 6.44444V7.33333H4.76837e-07V6.44444C4.76837e-07 5.2657 0.478895 4.13524 1.33133 3.30175C2.18377 2.46825 3.33993 2 4.54545 2V2Z" fill="#F7F7F7"/>
+                                <path d="M15.4545 18L4.54545 18C3.33992 18 2.18377 17.5317 1.33133 16.6983C0.478893 15.8648 0 14.7343 0 13.5556V12.6667L20 12.6667V13.5556C20 14.7343 19.5211 15.8648 18.6687 16.6983C17.8162 17.5317 16.6601 18 15.4545 18V18Z" fill="#CE2A1D"/>
+                                <path d="M20 7.33337H4.76837e-07V12.6667H20V7.33337Z" fill="#0037A1"/>
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_1630_2981">
+                                    <rect width="20" height="16" fill="white" transform="translate(0 2)"/>
+                                </clipPath>
+                            </defs>
+                        </svg>
+                        Казахстан
+                      </div>
+                  </div>
+                  <div class="member-list-item">
+                      <div class="member-list-name">Иван П</div>
+                      <div class="member-list-region">
+                          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_1630_2981)">
+                                <path d="M4.54545 2H15.4545C16.6601 2 17.8162 2.46825 18.6687 3.30175C19.5211 4.13524 20 5.2657 20 6.44444V7.33333H4.76837e-07V6.44444C4.76837e-07 5.2657 0.478895 4.13524 1.33133 3.30175C2.18377 2.46825 3.33993 2 4.54545 2V2Z" fill="#F7F7F7"/>
+                                <path d="M15.4545 18L4.54545 18C3.33992 18 2.18377 17.5317 1.33133 16.6983C0.478893 15.8648 0 14.7343 0 13.5556V12.6667L20 12.6667V13.5556C20 14.7343 19.5211 15.8648 18.6687 16.6983C17.8162 17.5317 16.6601 18 15.4545 18V18Z" fill="#CE2A1D"/>
+                                <path d="M20 7.33337H4.76837e-07V12.6667H20V7.33337Z" fill="#0037A1"/>
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_1630_2981">
+                                    <rect width="20" height="16" fill="white" transform="translate(0 2)"/>
+                                </clipPath>
+                            </defs>
+                        </svg>
+                        Казахстан
+                      </div>
+                  </div>
+              </div>
+              <a href="" class="member-list-more">Показать всех (233)</a>
+            </div>
+        </div>
+
+        <div class="invest-block">
+            <div class="container">
+                <div class="invest-row">
+                    <p class="invest-text">
+                        Инвестируйте прямо сейчас и <b>увеличивайте ваши шансы на победу в лотерее!</b>
+                    </p>
+                    <a href="" class="blue-btn">Инвестировать</a>
+                    <a href="" class="ref-link">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M15.104 5.5032C15.3254 5.27398 15.5902 5.09114 15.883 4.96536C16.1758 4.83958 16.4907 4.77337 16.8094 4.7706C17.1281 4.76783 17.4441 4.82856 17.7391 4.94923C18.034 5.0699 18.302 5.24811 18.5273 5.47345C18.7527 5.6988 18.9309 5.96676 19.0516 6.26171C19.1722 6.55666 19.233 6.87269 19.2302 7.19136C19.2274 7.51004 19.1612 7.82496 19.0354 8.11777C18.9096 8.41058 18.7268 8.67541 18.4976 8.8968L14.8976 12.4968C14.4475 12.9467 13.8372 13.1995 13.2008 13.1995C12.5644 13.1995 11.954 12.9467 11.504 12.4968C11.2777 12.2782 10.9745 12.1573 10.6599 12.16C10.3453 12.1627 10.0443 12.2889 9.8218 12.5114C9.59931 12.7339 9.47311 13.0349 9.47037 13.3495C9.46764 13.6642 9.58859 13.9673 9.80718 14.1936C10.7073 15.0935 11.928 15.599 13.2008 15.599C14.4736 15.599 15.6942 15.0935 16.5944 14.1936L20.1944 10.5936C21.0687 9.68831 21.5526 8.47582 21.5416 7.21728C21.5307 5.95873 21.0259 4.75483 20.1359 3.86487C19.246 2.97491 18.0421 2.4701 16.7835 2.45917C15.525 2.44823 14.3125 2.93204 13.4072 3.8064L11.6072 5.6064C11.4926 5.7171 11.4011 5.84951 11.3383 5.99592C11.2754 6.14232 11.2423 6.29978 11.2409 6.45912C11.2395 6.61846 11.2699 6.77647 11.3302 6.92395C11.3905 7.07142 11.4796 7.2054 11.5923 7.31808C11.705 7.43075 11.839 7.51985 11.9864 7.58019C12.1339 7.64052 12.2919 7.67089 12.4513 7.6695C12.6106 7.66812 12.7681 7.63501 12.9145 7.57212C13.0609 7.50923 13.1933 7.41781 13.304 7.3032L15.104 5.5032ZM9.10398 11.5032C9.55405 11.0533 10.1644 10.8005 10.8008 10.8005C11.4372 10.8005 12.0475 11.0533 12.4976 11.5032C12.6083 11.6178 12.7407 11.7092 12.8871 11.7721C13.0335 11.835 13.191 11.8681 13.3503 11.8695C13.5096 11.8709 13.6676 11.8405 13.8151 11.7802C13.9626 11.7199 14.0966 11.6307 14.2093 11.5181C14.3219 11.4054 14.411 11.2714 14.4714 11.1239C14.5317 10.9765 14.5621 10.8185 14.5607 10.6591C14.5593 10.4998 14.5262 10.3423 14.4633 10.1959C14.4004 10.0495 14.309 9.9171 14.1944 9.8064C13.2942 8.90654 12.0736 8.40103 10.8008 8.40103C9.52799 8.40103 8.30731 8.90654 7.40718 9.8064L3.80718 13.4064C3.34873 13.8492 2.98306 14.3788 2.73149 14.9645C2.47993 15.5501 2.34752 16.1799 2.34198 16.8173C2.33644 17.4546 2.45789 18.0867 2.69924 18.6766C2.94058 19.2665 3.297 19.8024 3.74768 20.2531C4.19837 20.7038 4.7343 21.0602 5.3242 21.3015C5.9141 21.5429 6.54617 21.6643 7.18351 21.6588C7.82085 21.6533 8.4507 21.5209 9.03632 21.2693C9.62194 21.0177 10.1516 20.6521 10.5944 20.1936L12.3944 18.3936C12.509 18.2829 12.6004 18.1505 12.6633 18.0041C12.7262 17.8577 12.7593 17.7002 12.7607 17.5409C12.7621 17.3815 12.7317 17.2235 12.6714 17.0761C12.611 16.9286 12.5219 16.7946 12.4093 16.6819C12.2966 16.5693 12.1626 16.4802 12.0151 16.4198C11.8677 16.3595 11.7096 16.3291 11.5503 16.3305C11.391 16.3319 11.2335 16.365 11.0871 16.4279C10.9407 16.4908 10.8083 16.5822 10.6976 16.6968L8.89758 18.4968C8.67619 18.726 8.41136 18.9089 8.11855 19.0346C7.82574 19.1604 7.51081 19.2266 7.19214 19.2294C6.87347 19.2322 6.55744 19.1714 6.26249 19.0508C5.96754 18.9301 5.69958 18.7519 5.47423 18.5266C5.24889 18.3012 5.07068 18.0332 4.95001 17.7383C4.82933 17.4433 4.76861 17.1273 4.77138 16.8086C4.77415 16.49 4.84036 16.175 4.96614 15.8822C5.09192 15.5894 5.27476 15.3246 5.50398 15.1032L9.10398 11.5032Z" fill="#3A75FF"></path>
+                        </svg>
+                        <span>Поделиться</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="faq">
+            <div class="container">
+                <div class="faq__inner">
+                    <h3 class="faq-title h2-title">Вопрос-ответ</h3>
+                    <div class="accordion-container">
+
+
+                        <div class="ac">
+                          <h2 class="ac-header">
+                            <button type="button" class="ac-trigger">Кто может принять участие в лотерее?
+                            </button>
+                          </h2>
+                          <div class="ac-panel">
+                            <p class="ac-text">Любой инвестор, который совершит фактический платёж в счёт оплаты рассрочки или досрочного погашения по действующему пакету или восстановит отменённый пакет, внеся сумму от 250 $ в период с 1 по 25 декабря включительно.</p>
+                          </div>
+                        </div>
+
+
+                        <div class="ac">
+                            <h2 class="ac-header">
+                              <button type="button" class="ac-trigger">Как я могу увеличить шансы на победу? 
+
+                              </button>
+                            </h2>
+                            <div class="ac-panel">
+                              <div class="ac-text">
+                                Купить новый пакет, сделать досрочное погашение активной рассрочки, восстановить отменённый пакет, внеся необходимое количество платежей. Чем больше платежей вы осуществите, тем больше купонов получите, а значит, увеличите свои шансы на победу.  
+
+                              </div>
+                            </div>
+                          </div>
+
+
+                        <div class="ac">
+                          <h2 class="ac-header">
+                            <button type="button" class="ac-trigger">Что если я внёс 250 $ не сразу, а частями? 
+
+                            </button>
+                          </h2>
+                          <div class="ac-panel">
+                            <div class="ac-text">Фактические платежи накапливаются и суммируются до достижения установленной стоимости купона.
+                            </div>
+                          </div>
+                        </div>
+
+                        
+                        <div class="ac">
+                            <h2 class="ac-header">
+                              <button type="button" class="ac-trigger">Как узнать, получил ли я призовой пакет?
+                              </button>
+                            </h2>
+                            <div class="ac-panel">
+                              <div class="ac-text">
+                                Вы получите соответствующее  уведомление в личном кабинете. 
+                                <br>Также список всех победителей будет представлен на этой странице выше. 
+                              </div>
+                            </div>
+                          </div>
+
+
+                          <div class="ac">
+                            <h2 class="ac-header">
+                              <button type="button" class="ac-trigger"> Могу ли я выиграть сразу несколько пакетов?
+                              </button>
+                            </h2>
+                            <div class="ac-panel">
+                              <div class="ac-text">
+                                Можете.
+                                <br>Чем больше купонов вами накоплено, тем больше призовых мест вы можете занять.
+                                <br>Вы имеете шанс получить больше одного призового пакета, если у вас более одного купона. После получения призового пакета один из ваших купонов перестаёт участвовать в розыгрыше, но остальные всё ещё принимают участие в нём.
+                              </div>
+                            </div>
+                          </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+     <div class="example-popup-wrapper" data-popup-id="1">
+        <div class="example-popup-overlay"></div>
+        <div class="example-popup">
+            <div class="example-body">
+                <h4 class="example-popup-title">
+                    При покупке нового инвестиционного пакета
+                </h4>
+                <div class="example-popup-content">
+                    В период проведения лотереи вы приобрели новый инвестиционный пакет номиналом 1 000 $ и полностью оплатили его. Так как за каждые 250 $ фактических платежей мы дарим 1 купон, то вы получили 4 купона и, соотвественно, стали участником розыгрыша.
+
+                </div> 
+            </div>
+
+            <a href="" class="example-close">Закрыть</a>
+        </div>
+    </div>
+
+    <div class="example-popup-wrapper" data-popup-id="2">
+        <div class="example-popup-overlay"></div>
+        <div class="example-popup">
+            <div class="example-body">
+                <h4 class="example-popup-title">
+                    При досрочном погашении рассрочки
+                </h4>
+                <div class="example-popup-content">
+                    Вы оплачиваете пакет номиналом 5 000 $, который приобрели в рассрочку на 20 месяцев. Вам осталось оплатить последние 3 месяца, и вы решили в рамках проведения лотереи погасить их досрочно, внеся платёж на сумму 750 $. Согласно условиям лотереи вы получили 3 купона и стали участником розыгрыша. 
+
+                </div> 
+            </div>
+
+            <a href="" class="example-close">Закрыть</a>
+        </div>
+    </div>
+
+    <div class="example-popup-wrapper" data-popup-id="3">
+        <div class="example-popup-overlay"></div>
+        <div class="example-popup">
+            <div class="example-body">
+                <h4 class="example-popup-title">
+                    При восстановлении рассрочки
+                </h4>
+                <div class="example-popup-content">
+                    В период проведения акции вы восстановили рассрочку по инвестиционному пакету номиналом 5 000$. Для этого вы погасили сразу все пропущенные платежи, внеся сумму 500$. Согласно условиям акции вы получаете два купона и становитесь участником розыгрыша инвестиционных пакетов.
+
+                </div> 
+            </div>
+
+            <a href="" class="example-close">Закрыть</a>
+        </div>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha512-uURl+ZXMBrF4AwGaWmEetzrd+J5/8NRkWAvJx5sbPSSuOb0bZLqf+tOzniObO00BjHa/dD7gub9oCGMLPQHtQA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/accordion-js@3.3.0/dist/accordion.min.js"></script>
+    <script src="js/libs.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
+
+
+

@@ -81,11 +81,14 @@ document.querySelectorAll('.copy-link a').forEach(item => {
 // video
 ;(function () {
     document.querySelectorAll('.video').forEach(node => {
-        node.addEventListener('click', function(){
-            const iframe = node.querySelector('iframe')
-            iframe.setAttribute('src', iframe.dataset.src);
+        node.addEventListener('click', function(e){
+            e.preventDefault();
+            const iframe = node.querySelector('iframe');
+            let videoUrl = iframe.getAttribute('src');
             node.querySelector('.play-btn').style.display = 'none';
             node.querySelector('.preview').style.display = 'none';
+            videoUrl += "&autoplay=1";
+            iframe.setAttribute('src', videoUrl);
             iframe.style.display = 'block';
         });
     })
@@ -177,12 +180,15 @@ document.addEventListener('DOMContentLoaded', function(){
       })
       
   
-
-      document.querySelector('.gallery .show-more').addEventListener('click', function(e){
-        e.preventDefault();
-        document.querySelector('.gallery__inner').classList.add('all');
-        this.remove();
-      })
+      let galleryMore = document.querySelector('.gallery .show-more');
+      if(galleryMore){
+        galleryMore.addEventListener('click', function(e){
+            e.preventDefault();
+            document.querySelector('.gallery__inner').classList.add('all');
+            this.remove();
+          })
+      }
+      
 
     
 
@@ -192,6 +198,20 @@ document.addEventListener('DOMContentLoaded', function(){
         })
       })
 
+      document.querySelectorAll('.faq .ac-header').forEach(item => {
+        item.addEventListener("click", function(){
+            $( ".faq .ac" ).each(function() {
+              if($(this).hasClass('expanded')){
+                $(this).removeClass('expanded');
+                $(this).find('.ac-header').removeClass('opened');
+                $(this).find('.ac-panel').slideToggle( "fast" );
+              }
+            });
+            $(this).toggleClass('opened');
+            $(this).parent('.ac').toggleClass('expanded');
+            $(this).next().slideToggle( "fast" );
+        })
+      })
    
 })
 
