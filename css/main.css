@@ -2553,21 +2553,32 @@ body, button {
 }
 
 .lottery .ac .ac-panel{
-  display: none;
+  height: 0;
+  opacity: 0;
+  transition: visibility 0.3s, opacity 0.3s linear, height 0.3s linear;
 }
 
 .lottery .faq .ac{
   background-color: #ECFAE8;
 }
-.lottery .faq .ac.expanded{
+.lottery .faq .ac:has(> .ac-header[aria-expanded='true']){
   background: #F4FFF1;
+}
+.lottery .faq .ac[aria-expanded='true']{
+  background: #F4FFF1;
+}
+.lottery .faq .ac-header[aria-expanded='true'] + .ac-panel{
+  display: block;
+  height: fit-content;
+  visibility: visible;
+  opacity: 1;
 }
 .lottery  .faq .ac .ac-trigger:after{
   background-image: url("data:image/svg+xml,%3Csvg width='35' height='34' viewBox='0 0 35 34' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M17.4672 8.5V17M17.4672 17V25.5M17.4672 17H25.8801M17.4672 17H9.05429' stroke='%2366BB56' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
 
 }
 
-.lottery .ac .ac-header.opened .ac-trigger:after{
+.lottery .ac .ac-header[aria-expanded='true'] .ac-trigger:after{
   background-image: url("data:image/svg+xml,%3Csvg width='35' height='34' viewBox='0 0 35 34' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M25.8801 17H17.4672H9.05429' stroke='%238CE97B' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
 
 }

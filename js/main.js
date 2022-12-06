@@ -198,21 +198,35 @@ document.addEventListener('DOMContentLoaded', function(){
         })
       })
 
-      document.querySelectorAll('.faq .ac-header').forEach(item => {
-        item.addEventListener("click", function(){
-            $( ".faq .ac" ).each(function() {
-              if($(this).hasClass('expanded')){
-                $(this).removeClass('expanded');
-                $(this).find('.ac-header').removeClass('opened');
-                $(this).find('.ac-panel').slideToggle( "fast" );
-              }
-            });
-            $(this).toggleClass('opened');
-            $(this).parent('.ac').toggleClass('expanded');
-            $(this).next().slideToggle( "fast" );
-        })
-      })
-   
+      // document.querySelectorAll('.faq .ac-header').forEach(item => {
+      //   item.addEventListener("click", function(){
+      //       $( ".faq .ac" ).each(function() {
+      //         if($(this).hasClass('expanded')){
+      //           $(this).removeClass('expanded');
+      //           $(this).find('.ac-header').removeClass('opened');
+      //           $(this).find('.ac-panel').slideToggle( "fast" );
+      //         }
+      //       });
+      //       $(this).toggleClass('opened');
+      //       $(this).parent('.ac').toggleClass('expanded');
+      //       $(this).next().slideToggle( "fast" );
+      //   })
+      // })
+
+      const items = document.querySelectorAll(".faq .ac-header");
+
+        function toggleAccordion() {
+          const itemToggle = this.getAttribute('aria-expanded');
+          
+          for (i = 0; i < items.length; i++) {
+            items[i].setAttribute('aria-expanded', 'false');
+          }
+          
+          if (itemToggle == 'false') {
+            this.setAttribute('aria-expanded', 'true');
+          }
+        }
+        items.forEach(item => item.addEventListener('click', toggleAccordion));
 })
 
 
