@@ -1,0 +1,993 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step Change</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css"
+        integrity="sha512-H9jrZiiopUdsLpg94A333EfumgUBpO9MdbxStdeITo+KEIMaNfHNvwyjjDJb+ERPaRS6DpyRlKbvPUasNItRyw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://unpkg.com/accordion-js@3.3.0/dist/accordion.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+</head>
+
+<body>
+    <div class="page-container step-change lottery">
+        <div class="main-screen out">
+            <div class="container">
+                <div class="main-screen__inner">
+                    <div class="arrow-check">
+                        <svg width="11" height="7" viewBox="0 0 11 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5.77797 5.00209L1.93897 1.15909C1.80172 1.02777 1.61846 0.955472 1.42852 0.957706C1.23858 0.959941 1.05707 1.03653 0.92295 1.17105C0.788827 1.30556 0.712767 1.48729 0.711088 1.67724C0.709409 1.86719 0.782243 2.05023 0.913967 2.18709L5.26397 6.54109C5.39594 6.67257 5.57351 6.74813 5.75976 6.75204C5.94601 6.75595 6.12659 6.68792 6.26397 6.56209L10.646 2.19009C10.7158 2.12331 10.7715 2.04327 10.81 1.95467C10.8485 1.86606 10.8689 1.77067 10.87 1.67407C10.8711 1.57748 10.853 1.48163 10.8166 1.39215C10.7802 1.30266 10.7264 1.22133 10.6582 1.15292C10.59 1.08452 10.5088 1.03041 10.4194 0.993776C10.33 0.957139 10.2342 0.938707 10.1376 0.939561C10.041 0.940415 9.94559 0.960538 9.85687 0.99875C9.76815 1.03696 9.68795 1.09249 9.62097 1.16209L5.77797 5.00209Z" fill="white"/>
+                        </svg>
+                    </div>
+
+                    <div class="main-screen__content">
+
+                         <div class="out-notification">
+                            Проект перешёл на 18-й этап
+                        </div>
+                  
+                        <div>
+                            <h1 class="title">1 января проект переходит на 18-й этап
+                            </h1>
+
+                            <span class="place">
+                                Успейте купить инвестиционный пакет по текущему дисконту до 31 декабря включительно. После смены этапа дисконт снизится.
+                            </span>
+                        </div>
+                        
+
+                        <div class="ref-btns">
+                            <a href="" class="yellow-btn">
+                                Инвестировать
+                            </a>
+                            <div class="copy-link">
+                                <a href=""  class="ref-link">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M15.104 5.5032C15.3254 5.27398 15.5902 5.09114 15.883 4.96536C16.1758 4.83958 16.4907 4.77337 16.8094 4.7706C17.1281 4.76783 17.4441 4.82856 17.7391 4.94923C18.034 5.0699 18.302 5.24811 18.5273 5.47345C18.7527 5.6988 18.9309 5.96676 19.0516 6.26171C19.1722 6.55666 19.233 6.87269 19.2302 7.19136C19.2274 7.51004 19.1612 7.82496 19.0354 8.11777C18.9096 8.41058 18.7268 8.67541 18.4976 8.8968L14.8976 12.4968C14.4475 12.9467 13.8372 13.1995 13.2008 13.1995C12.5644 13.1995 11.954 12.9467 11.504 12.4968C11.2777 12.2782 10.9745 12.1573 10.6599 12.16C10.3453 12.1627 10.0443 12.2889 9.8218 12.5114C9.59931 12.7339 9.47311 13.0349 9.47037 13.3495C9.46764 13.6642 9.58859 13.9673 9.80718 14.1936C10.7073 15.0935 11.928 15.599 13.2008 15.599C14.4736 15.599 15.6942 15.0935 16.5944 14.1936L20.1944 10.5936C21.0687 9.68831 21.5526 8.47582 21.5416 7.21728C21.5307 5.95873 21.0259 4.75483 20.1359 3.86487C19.246 2.97491 18.0421 2.4701 16.7835 2.45917C15.525 2.44823 14.3125 2.93204 13.4072 3.8064L11.6072 5.6064C11.4926 5.7171 11.4011 5.84951 11.3383 5.99592C11.2754 6.14232 11.2423 6.29978 11.2409 6.45912C11.2395 6.61846 11.2699 6.77647 11.3302 6.92395C11.3905 7.07142 11.4796 7.2054 11.5923 7.31808C11.705 7.43075 11.839 7.51985 11.9864 7.58019C12.1339 7.64052 12.2919 7.67089 12.4513 7.6695C12.6106 7.66812 12.7681 7.63501 12.9145 7.57212C13.0609 7.50923 13.1933 7.41781 13.304 7.3032L15.104 5.5032ZM9.10398 11.5032C9.55405 11.0533 10.1644 10.8005 10.8008 10.8005C11.4372 10.8005 12.0475 11.0533 12.4976 11.5032C12.6083 11.6178 12.7407 11.7092 12.8871 11.7721C13.0335 11.835 13.191 11.8681 13.3503 11.8695C13.5096 11.8709 13.6676 11.8405 13.8151 11.7802C13.9626 11.7199 14.0966 11.6307 14.2093 11.5181C14.3219 11.4054 14.411 11.2714 14.4714 11.1239C14.5317 10.9765 14.5621 10.8185 14.5607 10.6591C14.5593 10.4998 14.5262 10.3423 14.4633 10.1959C14.4004 10.0495 14.309 9.9171 14.1944 9.8064C13.2942 8.90654 12.0736 8.40103 10.8008 8.40103C9.52799 8.40103 8.30731 8.90654 7.40718 9.8064L3.80718 13.4064C3.34873 13.8492 2.98306 14.3788 2.73149 14.9645C2.47993 15.5501 2.34752 16.1799 2.34198 16.8173C2.33644 17.4546 2.45789 18.0867 2.69924 18.6766C2.94058 19.2665 3.297 19.8024 3.74768 20.2531C4.19837 20.7038 4.7343 21.0602 5.3242 21.3015C5.9141 21.5429 6.54617 21.6643 7.18351 21.6588C7.82085 21.6533 8.4507 21.5209 9.03632 21.2693C9.62194 21.0177 10.1516 20.6521 10.5944 20.1936L12.3944 18.3936C12.509 18.2829 12.6004 18.1505 12.6633 18.0041C12.7262 17.8577 12.7593 17.7002 12.7607 17.5409C12.7621 17.3815 12.7317 17.2235 12.6714 17.0761C12.611 16.9286 12.5219 16.7946 12.4093 16.6819C12.2966 16.5693 12.1626 16.4802 12.0151 16.4198C11.8677 16.3595 11.7096 16.3291 11.5503 16.3305C11.391 16.3319 11.2335 16.365 11.0871 16.4279C10.9407 16.4908 10.8083 16.5822 10.6976 16.6968L8.89758 18.4968C8.67619 18.726 8.41136 18.9089 8.11855 19.0346C7.82574 19.1604 7.51081 19.2266 7.19214 19.2294C6.87347 19.2322 6.55744 19.1714 6.26249 19.0508C5.96754 18.9301 5.69958 18.7519 5.47423 18.5266C5.24889 18.3012 5.07068 18.0332 4.95001 17.7383C4.82933 17.4433 4.76861 17.1273 4.77138 16.8086C4.77415 16.49 4.84036 16.175 4.96614 15.8822C5.09192 15.5894 5.27476 15.3246 5.50398 15.1032L9.10398 11.5032Z" fill="#3A75FF"/>
+                                        </svg>
+                                        <span >Поделиться</span>
+                                </a>
+                                <input type="hidden" class="copy-input" value="https://google.com">
+                            </div>
+                        </div>
+
+                    </div>
+    
+                    <div class="main-screen__img">
+                        <img src="img/step-change/main-screen.png" alt="Дадим тепло в ПКТБ «Совэлмаш»">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="step-links">
+                <a href="" class="step-item">
+                    <div class="step-number">
+                        1
+                    </div>
+                    <svg width="7" height="10" viewBox="0 0 7 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 1L5 5L1 9" stroke="#CCD5E3" stroke-width="2"/>
+                    </svg>
+                </a>
+                <a href="" class="step-item">
+                    <div class="step-number">
+                        2
+                    </div>
+                    <svg width="7" height="10" viewBox="0 0 7 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 1L5 5L1 9" stroke="#CCD5E3" stroke-width="2"/>
+                    </svg>
+                </a>
+                <a href="" class="step-item">
+                    <div class="step-number">
+                        3
+                    </div>
+                    <svg width="7" height="10" viewBox="0 0 7 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 1L5 5L1 9" stroke="#CCD5E3" stroke-width="2"/>
+                    </svg>
+                </a>
+                <a href="" class="step-item">
+                    <div class="step-number">
+                        4
+                    </div>
+                    <svg width="7" height="10" viewBox="0 0 7 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 1L5 5L1 9" stroke="#CCD5E3" stroke-width="2"/>
+                    </svg>
+                </a>
+                <a href="" class="step-item">
+                    <div class="step-number">
+                        5
+                    </div>
+                    <svg width="7" height="10" viewBox="0 0 7 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 1L5 5L1 9" stroke="#CCD5E3" stroke-width="2"/>
+                    </svg>
+                </a>
+                <a href="" class="step-item">
+                    <div class="step-number">
+                        6
+                    </div>
+                    <svg width="7" height="10" viewBox="0 0 7 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 1L5 5L1 9" stroke="#CCD5E3" stroke-width="2"/>
+                    </svg>
+                </a>
+                <a href="" class="step-item">
+                    <div class="step-number">
+                        7
+                    </div>
+                    <svg width="7" height="10" viewBox="0 0 7 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 1L5 5L1 9" stroke="#CCD5E3" stroke-width="2"/>
+                    </svg>
+                </a>
+                <a href="" class="step-item">
+                    <div class="step-number">
+                        8
+                    </div>
+                    <svg width="7" height="10" viewBox="0 0 7 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 1L5 5L1 9" stroke="#CCD5E3" stroke-width="2"/>
+                    </svg>
+                </a>
+                <a href="" class="step-item">
+                    <div class="step-number">
+                        9
+                    </div>
+                    <svg width="7" height="10" viewBox="0 0 7 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 1L5 5L1 9" stroke="#CCD5E3" stroke-width="2"/>
+                    </svg>
+                </a>
+                <a href="" class="step-item">
+                    <div class="step-number">
+                        10
+                    </div>
+                    <svg width="7" height="10" viewBox="0 0 7 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 1L5 5L1 9" stroke="#CCD5E3" stroke-width="2"/>
+                    </svg>
+                </a>
+                <a href="" class="step-item">
+                    <div class="step-number">
+                        11
+                    </div>
+                    <svg width="7" height="10" viewBox="0 0 7 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 1L5 5L1 9" stroke="#CCD5E3" stroke-width="2"/>
+                    </svg>
+                </a>
+                <a href="" class="step-item">
+                    <div class="step-number">
+                        12
+                    </div>
+                    <svg width="7" height="10" viewBox="0 0 7 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 1L5 5L1 9" stroke="#CCD5E3" stroke-width="2"/>
+                    </svg>
+                </a>
+                <a href="" class="step-item">
+                    <div class="step-number">
+                        13
+                    </div>
+                    <svg width="7" height="10" viewBox="0 0 7 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 1L5 5L1 9" stroke="#CCD5E3" stroke-width="2"/>
+                    </svg>
+                </a>
+                <a href="" class="step-item">
+                    <div class="step-number">
+                        14
+                    </div>
+                    <svg width="7" height="10" viewBox="0 0 7 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 1L5 5L1 9" stroke="#CCD5E3" stroke-width="2"/>
+                    </svg>
+                </a>
+                <a href="" class="step-item">
+                    <div class="step-number">
+                        15
+                    </div>
+                    <svg width="7" height="10" viewBox="0 0 7 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 1L5 5L1 9" stroke="#CCD5E3" stroke-width="2"/>
+                    </svg>
+                </a>
+                <a href="" class="step-item">
+                    <div class="step-number">
+                        16
+                    </div>
+                    <svg width="7" height="10" viewBox="0 0 7 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 1L5 5L1 9" stroke="#CCD5E3" stroke-width="2"/>
+                    </svg>
+                </a>
+                <a href="" class="step-item">
+                    <div class="step-number">
+                        17
+                    </div>
+                    <svg width="7" height="10" viewBox="0 0 7 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 1L5 5L1 9" stroke="#CCD5E3" stroke-width="2"/>
+                    </svg>
+                </a>
+                <a href="" class="step-item current">
+                    <div class="step-number">
+                        18
+                    </div>
+                    <svg width="7" height="10" viewBox="0 0 7 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 1L5 5L1 9" stroke="#CCD5E3" stroke-width="2"/>
+                    </svg>
+                </a>
+                <a href="" class="step-item inactive">
+                    <div class="step-number">
+                        19
+                    </div>
+                    <svg width="7" height="10" viewBox="0 0 7 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 1L5 5L1 9" stroke="#CCD5E3" stroke-width="2"/>
+                    </svg>
+                </a>
+                <a href="" class="step-item inactive">
+                    <div class="step-number">
+                        20
+                    </div>
+                </a>
+            </div>
+        </div>
+        
+
+        <div class="change-about">
+            <div class="container">
+                <h2 class="h2-title">
+                    Что такое <b>смена этапа?</b>
+                </h2>
+                <div class="change-about-row">
+                    <div class="change-about-item">
+                        <img src="img/step-change/change-1.png" alt="">
+                        <p>
+                            Процесс реализации проекта разбит на 20 этапов, для каждого из которых заложены определённые задачи. Их достижение позволяет проекту перейти на следующую стадию развития и приблизить завершение финансирования. Все задачи 17-го этапа выполнены, поэтому 1 января 2023 года состоится переход на новый <br> 18-й этап.
+                        </p>
+                    </div>
+                    <div class="change-about-item">
+                        <p>
+                            Чем ближе завершение финансирования, тем ниже риски для инвесторов. Поэтому с переходом на новый 18-й этап будет снижен дисконт на инвестиционные доли, а значит стоимость долей вырастет. Вот почему выгодно покупать доли до смены этапа, то есть до 31 декабря включительно, пока в проекте действует дисконт 17-го этапа.
+                        </p>
+                        <img src="img/step-change/change-2.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="video-block">
+            <div class="container">
+                <h2 class="h2-title">
+                    <b>Узнайте о ключевых достижениях</b> проекта на 17-м этапе
+                </h2>
+                <div class="video-block__inner">
+                    <div class="video">
+                       <iframe style="display: none;" title="Let's complete the 'Sovelmash' D&E construction on time" width="100%" height="100%" src="https://www.youtube.com/embed/3eh0CwuL8Uw?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <img src="img/video-preview.png" alt="" class="preview">
+                        <a class="play-btn" href="#"></a>
+                    </div>
+
+                    <div class="video-block__content">
+                        <p>15 декабря прошёл отчётный вебинар, в котором мы подвели итоги развития проекта за 2022 год. Спикерами были первые лица проекта: Дмитрий Дуюнов, Сергей Семёнов, Павел Филиппов, Александр Сударев, Виталий Аверьянов, Алиса Кузнецова.
+                        <br><br>
+                        А также руководитель компании ASPP Weihai Виктор Арестов, директор производственной кооперации «Ресурс» Андрей Лобов и национальные партнёры SOLARGROUP.
+                        <br><br>
+                        Мы сообщили итоги финансирования проекта в цифрах и последние новости компании «Совэлмаш». Вспомнили ключевые события и достижения проекта в 2022 году. И рассказали, как развивается технология «Славянка» по всему миру.
+                        <br><br>
+                        Смотрите запись вебинара, чтобы узнать подробности.
+                        <br><br><br>
+                        </p>
+
+                    </div>
+                    <div class="expand-button hidden">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M5.29303 7.293C5.48056 7.10553 5.73487 7.00021 6.00003 7.00021C6.26519 7.00021 6.5195 7.10553 6.70703 7.293L10 10.586L13.293 7.293C13.3853 7.19749 13.4956 7.12131 13.6176 7.0689C13.7396 7.01649 13.8709 6.9889 14.0036 6.98775C14.1364 6.9866 14.2681 7.0119 14.391 7.06218C14.5139 7.11246 14.6255 7.18671 14.7194 7.28061C14.8133 7.3745 14.8876 7.48615 14.9379 7.60905C14.9881 7.73194 15.0134 7.86362 15.0123 7.9964C15.0111 8.12918 14.9835 8.2604 14.9311 8.38241C14.8787 8.50441 14.8025 8.61475 14.707 8.707L10.707 12.707C10.5195 12.8945 10.2652 12.9998 10 12.9998C9.73487 12.9998 9.48056 12.8945 9.29303 12.707L5.29303 8.707C5.10556 8.51947 5.00024 8.26517 5.00024 8C5.00024 7.73484 5.10556 7.48053 5.29303 7.293Z" fill="#9CA3AF"/>
+                        </svg>
+                        <span>Развернуть</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="step-change-faq faq">
+            <div class="container">
+                <div class="faq__inner">
+                    <div class="accordion-container">
+
+
+                        <div class="ac">
+                          <h2 class="ac-header"  aria-expanded="false">
+                            <button type="button" class="ac-trigger">Читать об основных достижениях проекта на 17-м этапе
+                            </button>
+                          </h2>
+                          <div class="ac-panel">
+                            <div class="ac-text">
+                                17-й этап стал самым продолжительным в истории проекта. Он длится целый год. Вспомним основные достижения и события этого периода. 
+                                <br>
+                                <br>
+                                <b>Строительство ПКТБ «Совэлмаш»: от каркаса до теплого здания </b>
+                                <br><br>
+                                <ul>
+                                    <li>Полностью закрыт тепловой контур проектно-конструкторского технологического бюро (ПКТБ) «Совэлмаш». Для этого смонтированы внутренняя и внешняя облицовка стен, кровля, окна, двери, шлюз.</li>
+                                    <li>Залиты бетонные полы на всех этажах здания.</li>
+                                    <li>Смонтирована большая часть межкомнатных перегородок.</li>
+                                    <li>Начаты работы с инженерными сетями для подключения здания к теплотрассе, электро- и водоснабжению, канализации.</li>
+                                    <li>Выполнены лифтовые шахты, лестничные марши, грузовой пандус, ливнёвка и другие работы.</li>
+                                </ul>
+                                <br>
+                                <b>Деятельность «Совэлмаш»: разработки и выставки</b>
+                                <br>
+                                <br>
+                                <ul>
+                                    <li>Разработан универсальный встроенный электропривод на «Славянке» для электроинструмента и бытовой техники.</li>
+                                    <li>Открыт торговый дом «Совэлмаш», где будет продаваться техника собственного производства.</li>
+                                    <li>Первыми для предзаказа стали доступны углошлифовальные машины (УШМ).</li>
+                                    <li>В Китае создана компания, которая будет производить электроинструмент, разработанный в «Совэлмаш».</li>
+                                    <li>Успешно прошло участие компании на международном военно-промышленном форуме «Армия-2022». Разработки «Совэлмаш» вошли в топ-10 лучших инноваций и вызвали большой интерес со стороны потенциальных клиентов.</li>
+                                    <li>Вышло несколько публикаций о «Совэлмаш» в СМИ и на популярных You-Tube-каналах. - О компании впервые рассказали в таких известных изданиях, как журнал Forbes и телеканал «Звезда».</li>
+                                </ul>
+                                <br>
+                                <b>Конференции SOLARGROUP: новые страны и люди</b>
+                                <br>
+                                <br>
+                                <ul>
+                                    <li>Открылись национальные представительства компании SOLARGROUP в Колумбии и Северной Македонии.</li>
+                                    <li>Прошло 8 крупных офлайн-конференций SOLARGROUP в разных странах с участием топ-менеджеров компании.</li>
+                                    <li>В рамках конференций состоялись деловые встречи с представителями заводов, инженерами, чиновниками, которые интересуются технологией «Славянка» и открыты к сотрудничеству.</li>
+                                    <li>Полностью обновлён личный кабинет.</li>
+                                    <li>Запущено мобильное приложение SOLARGROUP в магазинах Google Play и Apple Apps.</li>
+                                    <li>Проведено более 270 живых встреч-презентаций проекта по всему миру и более 990 вебинаров.</li>
+                                </ul>
+                            </div>
+
+                          </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="coupons">
+            <div class="container">
+                <h2 class="coupons-title h2-title">
+                    Как <b>изменится дисконт?</b>
+                </h2>
+                <p class="coupons-top-text">
+                    В среднем доли подорожают на 10-20%.
+                </p>
+                <div class="coupons-row">
+                    <div class="coupons-item">
+                        <div class="coupons-item-content">
+                            <div class="coupons-val">
+                                17
+                                <span>этап</span>
+                            </div>
+                            <div class="coupons-val">
+                                157
+                                <span>средний дисконт</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="coupons-item">
+                        <div class="coupons-item-content">
+                            <div class="coupons-val">
+                                18
+                                <span>этап</span>
+                            </div>
+                            <div class="coupons-val">
+                                140
+                                <span>средний дисконт</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="why-now">
+            <div class="container">
+                <h2 class="h2-title">
+                    Почему выгодно <b>инвестировать сейчас?</b>
+                </h2>
+                <p class="why-now-top-text">
+                    Инвестируя на 17-м этапе, вы получите больше долей за те же деньги, чем на 18-м этапе.
+                </p>
+                <div class="invest-thumbs">
+                    <div class="invest-thumbs-wrapper">
+                        <div class="invest-thumb-slide">Пакет 500 $</div>
+                        <div class="invest-thumb-slide">Пакет 2 000 $</div>
+                        <div class="invest-thumb-slide">Пакет 5 000 $</div>
+                    </div>
+                </div>
+                <div class="invest-slider">
+                    <div class="invest-pagination"></div>
+                    <div class="why-now-row">
+                        <div class="why-now-item">
+                            <div class="why-now-item-text">
+                                Пакет 500 $
+                            </div>
+                            <img src="img/step-change/diagramm.svg" alt="">
+                            <div class="why-now-item-desc">
+                                <p><span class="rect green"></span>56 000 долей</p>
+                                <p><span class="rect blue"></span>46 000 долей</p>
+                            </div>
+                        </div>
+                        <div class="why-now-item">
+                            <div class="why-now-item-text">
+                                Пакет 2 000 $
+                            </div>
+                            <img src="img/step-change/diagramm-2.svg" alt="">
+                            <div class="why-now-item-desc">
+                                <p><span class="rect green"></span>274 000 долей</p>
+                                <p><span class="rect blue"></span>246 000 долей</p>
+                            </div>
+                        </div>
+                        <div class="why-now-item">
+                            <div class="why-now-item-text">
+                                Пакет 5 000 $
+                            </div>
+                            <img src="img/step-change/diagramm-3.svg" alt="">
+                            <div class="why-now-item-desc">
+                                <p><span class="rect green"></span>745 000 долей</p>
+                                <p><span class="rect blue"></span>670 000 долей</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+
+        <div class="ref ref-1">
+            <div class="container">
+                <div class="ref__inner">
+                        <div class="ref-btns">
+
+                            <p class="ref-btns-text">
+                                Таких выгодных условий, как на 17-м этапе, уже не будет
+                            </p>
+                            <div class="timer" data-time="2022-12-25">
+
+                                <div class="day">
+                                     <span class="number">09</span>
+                                     <span class="title">ДНИ</span>
+                                </div>
+     
+     
+                                <svg width="4" height="11" viewBox="0 0 4 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                 <g opacity="0.4">
+                                 <path d="M2 4C3.10457 4 4 3.10457 4 2C4 0.89543 3.10457 0 2 0C0.89543 0 0 0.89543 0 2C0 3.10457 0.89543 4 2 4Z" fill="#303133"></path>
+                                 <path d="M2 11C3.10457 11 4 10.1046 4 9C4 7.89543 3.10457 7 2 7C0.89543 7 0 7.89543 0 9C0 10.1046 0.89543 11 2 11Z" fill="#303133"></path>
+                                 </g>
+                                 </svg>
+     
+                                 
+     
+                                 <div class="hours">
+                                     <span class="number">08</span>
+                                     <span class="title">ЧАСЫ</span>
+                                 </div>
+     
+     
+                                 <svg width="4" height="11" viewBox="0 0 4 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                     <g opacity="0.4">
+                                     <path d="M2 4C3.10457 4 4 3.10457 4 2C4 0.89543 3.10457 0 2 0C0.89543 0 0 0.89543 0 2C0 3.10457 0.89543 4 2 4Z" fill="#303133"></path>
+                                     <path d="M2 11C3.10457 11 4 10.1046 4 9C4 7.89543 3.10457 7 2 7C0.89543 7 0 7.89543 0 9C0 10.1046 0.89543 11 2 11Z" fill="#303133"></path>
+                                     </g>
+                                     </svg>
+                                     
+     
+     
+                                 <div class="minutes">
+                                     <span class="number">29</span>
+                                     <span class="title">МИН</span>
+                                 </div>
+     
+     
+                                 <svg width="4" height="11" viewBox="0 0 4 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                     <g opacity="0.4">
+                                     <path d="M2 4C3.10457 4 4 3.10457 4 2C4 0.89543 3.10457 0 2 0C0.89543 0 0 0.89543 0 2C0 3.10457 0.89543 4 2 4Z" fill="#303133"></path>
+                                     <path d="M2 11C3.10457 11 4 10.1046 4 9C4 7.89543 3.10457 7 2 7C0.89543 7 0 7.89543 0 9C0 10.1046 0.89543 11 2 11Z" fill="#303133"></path>
+                                     </g>
+                                     </svg>
+                                     
+     
+     
+                                 <div class="seconds">
+                                     <span class="number">15</span>
+                                     <span class="title">СЕК </span>
+                                 </div>
+                             </div>
+
+                             <a href="" class="blue-btn">
+                                Инвестировать
+                            </a>
+
+                            <div class="copy-link">
+                                <a href=""  class="ref-link">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M15.104 5.5032C15.3254 5.27398 15.5902 5.09114 15.883 4.96536C16.1758 4.83958 16.4907 4.77337 16.8094 4.7706C17.1281 4.76783 17.4441 4.82856 17.7391 4.94923C18.034 5.0699 18.302 5.24811 18.5273 5.47345C18.7527 5.6988 18.9309 5.96676 19.0516 6.26171C19.1722 6.55666 19.233 6.87269 19.2302 7.19136C19.2274 7.51004 19.1612 7.82496 19.0354 8.11777C18.9096 8.41058 18.7268 8.67541 18.4976 8.8968L14.8976 12.4968C14.4475 12.9467 13.8372 13.1995 13.2008 13.1995C12.5644 13.1995 11.954 12.9467 11.504 12.4968C11.2777 12.2782 10.9745 12.1573 10.6599 12.16C10.3453 12.1627 10.0443 12.2889 9.8218 12.5114C9.59931 12.7339 9.47311 13.0349 9.47037 13.3495C9.46764 13.6642 9.58859 13.9673 9.80718 14.1936C10.7073 15.0935 11.928 15.599 13.2008 15.599C14.4736 15.599 15.6942 15.0935 16.5944 14.1936L20.1944 10.5936C21.0687 9.68831 21.5526 8.47582 21.5416 7.21728C21.5307 5.95873 21.0259 4.75483 20.1359 3.86487C19.246 2.97491 18.0421 2.4701 16.7835 2.45917C15.525 2.44823 14.3125 2.93204 13.4072 3.8064L11.6072 5.6064C11.4926 5.7171 11.4011 5.84951 11.3383 5.99592C11.2754 6.14232 11.2423 6.29978 11.2409 6.45912C11.2395 6.61846 11.2699 6.77647 11.3302 6.92395C11.3905 7.07142 11.4796 7.2054 11.5923 7.31808C11.705 7.43075 11.839 7.51985 11.9864 7.58019C12.1339 7.64052 12.2919 7.67089 12.4513 7.6695C12.6106 7.66812 12.7681 7.63501 12.9145 7.57212C13.0609 7.50923 13.1933 7.41781 13.304 7.3032L15.104 5.5032ZM9.10398 11.5032C9.55405 11.0533 10.1644 10.8005 10.8008 10.8005C11.4372 10.8005 12.0475 11.0533 12.4976 11.5032C12.6083 11.6178 12.7407 11.7092 12.8871 11.7721C13.0335 11.835 13.191 11.8681 13.3503 11.8695C13.5096 11.8709 13.6676 11.8405 13.8151 11.7802C13.9626 11.7199 14.0966 11.6307 14.2093 11.5181C14.3219 11.4054 14.411 11.2714 14.4714 11.1239C14.5317 10.9765 14.5621 10.8185 14.5607 10.6591C14.5593 10.4998 14.5262 10.3423 14.4633 10.1959C14.4004 10.0495 14.309 9.9171 14.1944 9.8064C13.2942 8.90654 12.0736 8.40103 10.8008 8.40103C9.52799 8.40103 8.30731 8.90654 7.40718 9.8064L3.80718 13.4064C3.34873 13.8492 2.98306 14.3788 2.73149 14.9645C2.47993 15.5501 2.34752 16.1799 2.34198 16.8173C2.33644 17.4546 2.45789 18.0867 2.69924 18.6766C2.94058 19.2665 3.297 19.8024 3.74768 20.2531C4.19837 20.7038 4.7343 21.0602 5.3242 21.3015C5.9141 21.5429 6.54617 21.6643 7.18351 21.6588C7.82085 21.6533 8.4507 21.5209 9.03632 21.2693C9.62194 21.0177 10.1516 20.6521 10.5944 20.1936L12.3944 18.3936C12.509 18.2829 12.6004 18.1505 12.6633 18.0041C12.7262 17.8577 12.7593 17.7002 12.7607 17.5409C12.7621 17.3815 12.7317 17.2235 12.6714 17.0761C12.611 16.9286 12.5219 16.7946 12.4093 16.6819C12.2966 16.5693 12.1626 16.4802 12.0151 16.4198C11.8677 16.3595 11.7096 16.3291 11.5503 16.3305C11.391 16.3319 11.2335 16.365 11.0871 16.4279C10.9407 16.4908 10.8083 16.5822 10.6976 16.6968L8.89758 18.4968C8.67619 18.726 8.41136 18.9089 8.11855 19.0346C7.82574 19.1604 7.51081 19.2266 7.19214 19.2294C6.87347 19.2322 6.55744 19.1714 6.26249 19.0508C5.96754 18.9301 5.69958 18.7519 5.47423 18.5266C5.24889 18.3012 5.07068 18.0332 4.95001 17.7383C4.82933 17.4433 4.76861 17.1273 4.77138 16.8086C4.77415 16.49 4.84036 16.175 4.96614 15.8822C5.09192 15.5894 5.27476 15.3246 5.50398 15.1032L9.10398 11.5032Z" fill="#3A75FF"/>
+                                        </svg>
+                                        <span>Скопировать реферальную ссылку</span>
+                                </a>
+                                <input type="hidden" class="copy-input" value="https://google.com">
+                            </div>
+                         
+                        </div>
+                </div>
+
+            </div>
+        </div>
+
+
+        <div class="regular-info-block">
+            <div class="container">
+                <div class="regular-info-block-inner">
+                    <img src="img/step-change/info-image.svg" alt="">
+                    <div class="regular-info-block-content">
+                        <h2 class="h2-title">Увеличьте закрытый инвестиционный пакет </h2>
+                        <p>
+                            До 31 декабря включительно увеличьте полностью оплаченный пакет и покупайте доли компании намного дешевле, чем они стоят в проекте сейчас или будут стоить в дальнейшем.
+                        </p>
+                        <a href="" class="example-link" data-popup="1">
+                            Посмотреть пример
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="video-block full-video">
+            <div class="container">
+                <h2 class="h2-title">
+                    <b>Завершение строительства</b> все ближе
+                </h2>
+                <p class="video-block-text">
+                    Главная цель проекта — запустить работу проектно-конструкторского технологического бюро «Совэлмаш». Строительство ПКТБ находится сейчас на завершающей стадии и планируется к завершению в 2023 году.
+                </p>
+                <div class="video-block__inner">
+                    <div class="video">
+                        <iframe style="display: none;" title="Let's complete the 'Sovelmash' D&E construction on time" width="100%" height="100%" src="https://www.youtube.com/embed/3eh0CwuL8Uw?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <img src="img/video-preview.png" alt="" class="preview">
+                        <a class="play-btn"  href="#"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="gallery">
+            <div class="container">
+                <h2 class="gallery-title h2-title">
+                    Проект активно поддерживают <b>по всему миру</b>
+                </h2>
+                <p class="gallery-text">
+                    Уже 50 000 человек стали инвесторами проекта. Присоединяйтесь и вы!
+                </p>
+                <div class="gallery__inner">
+                    <a href="img/step-change/regions/columbua.webp" class="gallery-item" data-fancybox="gallery" title="Колумбия">
+                        <img src="img/step-change/regions/columbua.webp" alt="Колумбия">
+                        <div class="image-country">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_1630_2981)">
+                                    <path d="M4.54545 2H15.4545C16.6601 2 17.8162 2.46825 18.6687 3.30175C19.5211 4.13524 20 5.2657 20 6.44444V7.33333H4.76837e-07V6.44444C4.76837e-07 5.2657 0.478895 4.13524 1.33133 3.30175C2.18377 2.46825 3.33993 2 4.54545 2V2Z" fill="#F7F7F7"/>
+                                    <path d="M15.4545 18L4.54545 18C3.33992 18 2.18377 17.5317 1.33133 16.6983C0.478893 15.8648 0 14.7343 0 13.5556V12.6667L20 12.6667V13.5556C20 14.7343 19.5211 15.8648 18.6687 16.6983C17.8162 17.5317 16.6601 18 15.4545 18V18Z" fill="#CE2A1D"/>
+                                    <path d="M20 7.33337H4.76837e-07V12.6667H20V7.33337Z" fill="#0037A1"/>
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_1630_2981">
+                                        <rect width="20" height="16" fill="white" transform="translate(0 2)"/>
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                            Колумбия
+                        </div>
+                    </a>
+                    <a href="img/step-change/regions/senegal.webp" class="gallery-item" data-fancybox="gallery" title="Сенегал">
+                        <img src="img/step-change/regions/senegal.webp" alt="Сенегал">
+                        <div class="image-country">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_1630_2981)">
+                                    <path d="M4.54545 2H15.4545C16.6601 2 17.8162 2.46825 18.6687 3.30175C19.5211 4.13524 20 5.2657 20 6.44444V7.33333H4.76837e-07V6.44444C4.76837e-07 5.2657 0.478895 4.13524 1.33133 3.30175C2.18377 2.46825 3.33993 2 4.54545 2V2Z" fill="#F7F7F7"/>
+                                    <path d="M15.4545 18L4.54545 18C3.33992 18 2.18377 17.5317 1.33133 16.6983C0.478893 15.8648 0 14.7343 0 13.5556V12.6667L20 12.6667V13.5556C20 14.7343 19.5211 15.8648 18.6687 16.6983C17.8162 17.5317 16.6601 18 15.4545 18V18Z" fill="#CE2A1D"/>
+                                    <path d="M20 7.33337H4.76837e-07V12.6667H20V7.33337Z" fill="#0037A1"/>
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_1630_2981">
+                                        <rect width="20" height="16" fill="white" transform="translate(0 2)"/>
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                            Сенегал
+                        </div>
+                    </a>
+                    <a href="img/step-change/regions/moscow-2.webp" class="gallery-item" data-fancybox="gallery" title="Россия">
+                        <img src="img/step-change/regions/moscow-2.webp" alt="Россия">
+                        <div class="image-country">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_1630_2981)">
+                                    <path d="M4.54545 2H15.4545C16.6601 2 17.8162 2.46825 18.6687 3.30175C19.5211 4.13524 20 5.2657 20 6.44444V7.33333H4.76837e-07V6.44444C4.76837e-07 5.2657 0.478895 4.13524 1.33133 3.30175C2.18377 2.46825 3.33993 2 4.54545 2V2Z" fill="#F7F7F7"/>
+                                    <path d="M15.4545 18L4.54545 18C3.33992 18 2.18377 17.5317 1.33133 16.6983C0.478893 15.8648 0 14.7343 0 13.5556V12.6667L20 12.6667V13.5556C20 14.7343 19.5211 15.8648 18.6687 16.6983C17.8162 17.5317 16.6601 18 15.4545 18V18Z" fill="#CE2A1D"/>
+                                    <path d="M20 7.33337H4.76837e-07V12.6667H20V7.33337Z" fill="#0037A1"/>
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_1630_2981">
+                                        <rect width="20" height="16" fill="white" transform="translate(0 2)"/>
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                            Россия
+                        </div>
+                    </a>
+                    <a href="img/step-change/regions/moscow.webp" class="gallery-item" data-fancybox="gallery" title="Россия">
+                        <img src="img/step-change/regions/moscow.webp" alt="Россия">
+                        <div class="image-country">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_1630_2981)">
+                                    <path d="M4.54545 2H15.4545C16.6601 2 17.8162 2.46825 18.6687 3.30175C19.5211 4.13524 20 5.2657 20 6.44444V7.33333H4.76837e-07V6.44444C4.76837e-07 5.2657 0.478895 4.13524 1.33133 3.30175C2.18377 2.46825 3.33993 2 4.54545 2V2Z" fill="#F7F7F7"/>
+                                    <path d="M15.4545 18L4.54545 18C3.33992 18 2.18377 17.5317 1.33133 16.6983C0.478893 15.8648 0 14.7343 0 13.5556V12.6667L20 12.6667V13.5556C20 14.7343 19.5211 15.8648 18.6687 16.6983C17.8162 17.5317 16.6601 18 15.4545 18V18Z" fill="#CE2A1D"/>
+                                    <path d="M20 7.33337H4.76837e-07V12.6667H20V7.33337Z" fill="#0037A1"/>
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_1630_2981">
+                                        <rect width="20" height="16" fill="white" transform="translate(0 2)"/>
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                            Россия
+                        </div>
+                    </a>
+                    <a href="img/step-change/regions/benin.webp" class="gallery-item" data-fancybox="gallery" title="Бенин">
+                        <img src="img/step-change/regions/benin.webp" alt="Бенин">
+                        <div class="image-country">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_1630_2981)">
+                                    <path d="M4.54545 2H15.4545C16.6601 2 17.8162 2.46825 18.6687 3.30175C19.5211 4.13524 20 5.2657 20 6.44444V7.33333H4.76837e-07V6.44444C4.76837e-07 5.2657 0.478895 4.13524 1.33133 3.30175C2.18377 2.46825 3.33993 2 4.54545 2V2Z" fill="#F7F7F7"/>
+                                    <path d="M15.4545 18L4.54545 18C3.33992 18 2.18377 17.5317 1.33133 16.6983C0.478893 15.8648 0 14.7343 0 13.5556V12.6667L20 12.6667V13.5556C20 14.7343 19.5211 15.8648 18.6687 16.6983C17.8162 17.5317 16.6601 18 15.4545 18V18Z" fill="#CE2A1D"/>
+                                    <path d="M20 7.33337H4.76837e-07V12.6667H20V7.33337Z" fill="#0037A1"/>
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_1630_2981">
+                                        <rect width="20" height="16" fill="white" transform="translate(0 2)"/>
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                            Бенин
+                        </div>
+                    </a>
+                    <a href="img/step-change/regions/vietnam.webp" class="gallery-item" data-fancybox="gallery" title="Вьетнам">
+                        <img src="img/step-change/regions/vietnam.webp" alt="Вьетнам">
+                        <div class="image-country">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_1630_2981)">
+                                    <path d="M4.54545 2H15.4545C16.6601 2 17.8162 2.46825 18.6687 3.30175C19.5211 4.13524 20 5.2657 20 6.44444V7.33333H4.76837e-07V6.44444C4.76837e-07 5.2657 0.478895 4.13524 1.33133 3.30175C2.18377 2.46825 3.33993 2 4.54545 2V2Z" fill="#F7F7F7"/>
+                                    <path d="M15.4545 18L4.54545 18C3.33992 18 2.18377 17.5317 1.33133 16.6983C0.478893 15.8648 0 14.7343 0 13.5556V12.6667L20 12.6667V13.5556C20 14.7343 19.5211 15.8648 18.6687 16.6983C17.8162 17.5317 16.6601 18 15.4545 18V18Z" fill="#CE2A1D"/>
+                                    <path d="M20 7.33337H4.76837e-07V12.6667H20V7.33337Z" fill="#0037A1"/>
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_1630_2981">
+                                        <rect width="20" height="16" fill="white" transform="translate(0 2)"/>
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                            Вьетнам
+                        </div>
+                    </a>
+                    <a href="img/step-change/regions/indonesia.webp" class="gallery-item" data-fancybox="gallery" title="Индонезия">
+                        <img src="img/step-change/regions/indonesia.webp" alt="Индонезия">
+                        <div class="image-country">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_1630_2981)">
+                                    <path d="M4.54545 2H15.4545C16.6601 2 17.8162 2.46825 18.6687 3.30175C19.5211 4.13524 20 5.2657 20 6.44444V7.33333H4.76837e-07V6.44444C4.76837e-07 5.2657 0.478895 4.13524 1.33133 3.30175C2.18377 2.46825 3.33993 2 4.54545 2V2Z" fill="#F7F7F7"/>
+                                    <path d="M15.4545 18L4.54545 18C3.33992 18 2.18377 17.5317 1.33133 16.6983C0.478893 15.8648 0 14.7343 0 13.5556V12.6667L20 12.6667V13.5556C20 14.7343 19.5211 15.8648 18.6687 16.6983C17.8162 17.5317 16.6601 18 15.4545 18V18Z" fill="#CE2A1D"/>
+                                    <path d="M20 7.33337H4.76837e-07V12.6667H20V7.33337Z" fill="#0037A1"/>
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_1630_2981">
+                                        <rect width="20" height="16" fill="white" transform="translate(0 2)"/>
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                            Индонезия
+                        </div>
+                    </a>
+                    <a href="img/step-change/regions/makedonia.webp" class="gallery-item" data-fancybox="gallery" title="Македония">
+                        <img src="img/step-change/regions/makedonia.webp" alt="Македония">
+                        <div class="image-country">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_1630_2981)">
+                                    <path d="M4.54545 2H15.4545C16.6601 2 17.8162 2.46825 18.6687 3.30175C19.5211 4.13524 20 5.2657 20 6.44444V7.33333H4.76837e-07V6.44444C4.76837e-07 5.2657 0.478895 4.13524 1.33133 3.30175C2.18377 2.46825 3.33993 2 4.54545 2V2Z" fill="#F7F7F7"/>
+                                    <path d="M15.4545 18L4.54545 18C3.33992 18 2.18377 17.5317 1.33133 16.6983C0.478893 15.8648 0 14.7343 0 13.5556V12.6667L20 12.6667V13.5556C20 14.7343 19.5211 15.8648 18.6687 16.6983C17.8162 17.5317 16.6601 18 15.4545 18V18Z" fill="#CE2A1D"/>
+                                    <path d="M20 7.33337H4.76837e-07V12.6667H20V7.33337Z" fill="#0037A1"/>
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_1630_2981">
+                                        <rect width="20" height="16" fill="white" transform="translate(0 2)"/>
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                            Македония
+                        </div>
+                    </a>
+                    <a href="img/step-change/regions/bolgary.webp" class="gallery-item" data-fancybox="gallery" title="Болгария">
+                        <img src="img/step-change/regions/bolgary.webp" alt="Болгария">
+                        <div class="image-country">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_1630_2981)">
+                                    <path d="M4.54545 2H15.4545C16.6601 2 17.8162 2.46825 18.6687 3.30175C19.5211 4.13524 20 5.2657 20 6.44444V7.33333H4.76837e-07V6.44444C4.76837e-07 5.2657 0.478895 4.13524 1.33133 3.30175C2.18377 2.46825 3.33993 2 4.54545 2V2Z" fill="#F7F7F7"/>
+                                    <path d="M15.4545 18L4.54545 18C3.33992 18 2.18377 17.5317 1.33133 16.6983C0.478893 15.8648 0 14.7343 0 13.5556V12.6667L20 12.6667V13.5556C20 14.7343 19.5211 15.8648 18.6687 16.6983C17.8162 17.5317 16.6601 18 15.4545 18V18Z" fill="#CE2A1D"/>
+                                    <path d="M20 7.33337H4.76837e-07V12.6667H20V7.33337Z" fill="#0037A1"/>
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_1630_2981">
+                                        <rect width="20" height="16" fill="white" transform="translate(0 2)"/>
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                            Болгария
+                        </div>
+                    </a>
+                    <a href="img/step-change/regions/india.webp" class="gallery-item" data-fancybox="gallery" title="Индия">
+                        <img src="img/step-change/regions/india.webp" alt="Индия">
+                        <div class="image-country">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_1630_2981)">
+                                    <path d="M4.54545 2H15.4545C16.6601 2 17.8162 2.46825 18.6687 3.30175C19.5211 4.13524 20 5.2657 20 6.44444V7.33333H4.76837e-07V6.44444C4.76837e-07 5.2657 0.478895 4.13524 1.33133 3.30175C2.18377 2.46825 3.33993 2 4.54545 2V2Z" fill="#F7F7F7"/>
+                                    <path d="M15.4545 18L4.54545 18C3.33992 18 2.18377 17.5317 1.33133 16.6983C0.478893 15.8648 0 14.7343 0 13.5556V12.6667L20 12.6667V13.5556C20 14.7343 19.5211 15.8648 18.6687 16.6983C17.8162 17.5317 16.6601 18 15.4545 18V18Z" fill="#CE2A1D"/>
+                                    <path d="M20 7.33337H4.76837e-07V12.6667H20V7.33337Z" fill="#0037A1"/>
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_1630_2981">
+                                        <rect width="20" height="16" fill="white" transform="translate(0 2)"/>
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                            Индия
+                        </div>
+                    </a>
+                    <a href="img/step-change/regions/nigeria.webp" class="gallery-item" data-fancybox="gallery" title="Нигерия">
+                        <img src="img/step-change/regions/nigeria.webp" alt="Нигерия">
+                        <div class="image-country">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_1630_2981)">
+                                    <path d="M4.54545 2H15.4545C16.6601 2 17.8162 2.46825 18.6687 3.30175C19.5211 4.13524 20 5.2657 20 6.44444V7.33333H4.76837e-07V6.44444C4.76837e-07 5.2657 0.478895 4.13524 1.33133 3.30175C2.18377 2.46825 3.33993 2 4.54545 2V2Z" fill="#F7F7F7"/>
+                                    <path d="M15.4545 18L4.54545 18C3.33992 18 2.18377 17.5317 1.33133 16.6983C0.478893 15.8648 0 14.7343 0 13.5556V12.6667L20 12.6667V13.5556C20 14.7343 19.5211 15.8648 18.6687 16.6983C17.8162 17.5317 16.6601 18 15.4545 18V18Z" fill="#CE2A1D"/>
+                                    <path d="M20 7.33337H4.76837e-07V12.6667H20V7.33337Z" fill="#0037A1"/>
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_1630_2981">
+                                        <rect width="20" height="16" fill="white" transform="translate(0 2)"/>
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                            Нигерия
+                        </div>
+                    </a>
+                    <a href="img/step-change/regions/kamerun.webp" class="gallery-item" data-fancybox="gallery" title="Камерун">
+                        <img src="img/step-change/regions/kamerun.webp" alt="Камерун">
+                        <div class="image-country">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_1630_2981)">
+                                    <path d="M4.54545 2H15.4545C16.6601 2 17.8162 2.46825 18.6687 3.30175C19.5211 4.13524 20 5.2657 20 6.44444V7.33333H4.76837e-07V6.44444C4.76837e-07 5.2657 0.478895 4.13524 1.33133 3.30175C2.18377 2.46825 3.33993 2 4.54545 2V2Z" fill="#F7F7F7"/>
+                                    <path d="M15.4545 18L4.54545 18C3.33992 18 2.18377 17.5317 1.33133 16.6983C0.478893 15.8648 0 14.7343 0 13.5556V12.6667L20 12.6667V13.5556C20 14.7343 19.5211 15.8648 18.6687 16.6983C17.8162 17.5317 16.6601 18 15.4545 18V18Z" fill="#CE2A1D"/>
+                                    <path d="M20 7.33337H4.76837e-07V12.6667H20V7.33337Z" fill="#0037A1"/>
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_1630_2981">
+                                        <rect width="20" height="16" fill="white" transform="translate(0 2)"/>
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                            Камерун
+                        </div>
+                    </a>
+                </div>
+
+                <a href="" class="show-more">Загрузить еще</a>
+
+            </div>
+        </div>
+
+        <div class="ref ref-2">
+            <div class="container">
+                <div class="ref-title">
+                    Таких выгодных условий, как на 17-м этапе, уже не будет
+                </div>
+                <div class="ref__inner">
+                  
+                        <div class="ref-btns">
+                            <a href="" class="blue-btn">
+                                Инвестировать
+                            </a>
+
+
+                            <div class="timer" data-time="2022-12-25">
+
+                                <div class="day">
+                                     <span class="number">09</span>
+                                     <span class="title">ДНИ</span>
+                                </div>
+     
+     
+                                <svg width="4" height="11" viewBox="0 0 4 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                 <g opacity="0.4">
+                                 <path d="M2 4C3.10457 4 4 3.10457 4 2C4 0.89543 3.10457 0 2 0C0.89543 0 0 0.89543 0 2C0 3.10457 0.89543 4 2 4Z" fill="#303133"></path>
+                                 <path d="M2 11C3.10457 11 4 10.1046 4 9C4 7.89543 3.10457 7 2 7C0.89543 7 0 7.89543 0 9C0 10.1046 0.89543 11 2 11Z" fill="#303133"></path>
+                                 </g>
+                                 </svg>
+     
+                                 
+     
+                                 <div class="hours">
+                                     <span class="number">08</span>
+                                     <span class="title">ЧАСЫ</span>
+                                 </div>
+     
+     
+                                 <svg width="4" height="11" viewBox="0 0 4 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                     <g opacity="0.4">
+                                     <path d="M2 4C3.10457 4 4 3.10457 4 2C4 0.89543 3.10457 0 2 0C0.89543 0 0 0.89543 0 2C0 3.10457 0.89543 4 2 4Z" fill="#303133"></path>
+                                     <path d="M2 11C3.10457 11 4 10.1046 4 9C4 7.89543 3.10457 7 2 7C0.89543 7 0 7.89543 0 9C0 10.1046 0.89543 11 2 11Z" fill="#303133"></path>
+                                     </g>
+                                     </svg>
+                                     
+     
+     
+                                 <div class="minutes">
+                                     <span class="number">29</span>
+                                     <span class="title">МИН</span>
+                                 </div>
+     
+     
+                                 <svg width="4" height="11" viewBox="0 0 4 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                     <g opacity="0.4">
+                                     <path d="M2 4C3.10457 4 4 3.10457 4 2C4 0.89543 3.10457 0 2 0C0.89543 0 0 0.89543 0 2C0 3.10457 0.89543 4 2 4Z" fill="#303133"></path>
+                                     <path d="M2 11C3.10457 11 4 10.1046 4 9C4 7.89543 3.10457 7 2 7C0.89543 7 0 7.89543 0 9C0 10.1046 0.89543 11 2 11Z" fill="#303133"></path>
+                                     </g>
+                                     </svg>
+                                     
+     
+     
+                                 <div class="seconds">
+                                     <span class="number">15</span>
+                                     <span class="title">СЕК </span>
+                                 </div>
+                             </div>
+
+                            <div class="copy-link">
+                                <a href=""  class="ref-link">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M15.104 5.5032C15.3254 5.27398 15.5902 5.09114 15.883 4.96536C16.1758 4.83958 16.4907 4.77337 16.8094 4.7706C17.1281 4.76783 17.4441 4.82856 17.7391 4.94923C18.034 5.0699 18.302 5.24811 18.5273 5.47345C18.7527 5.6988 18.9309 5.96676 19.0516 6.26171C19.1722 6.55666 19.233 6.87269 19.2302 7.19136C19.2274 7.51004 19.1612 7.82496 19.0354 8.11777C18.9096 8.41058 18.7268 8.67541 18.4976 8.8968L14.8976 12.4968C14.4475 12.9467 13.8372 13.1995 13.2008 13.1995C12.5644 13.1995 11.954 12.9467 11.504 12.4968C11.2777 12.2782 10.9745 12.1573 10.6599 12.16C10.3453 12.1627 10.0443 12.2889 9.8218 12.5114C9.59931 12.7339 9.47311 13.0349 9.47037 13.3495C9.46764 13.6642 9.58859 13.9673 9.80718 14.1936C10.7073 15.0935 11.928 15.599 13.2008 15.599C14.4736 15.599 15.6942 15.0935 16.5944 14.1936L20.1944 10.5936C21.0687 9.68831 21.5526 8.47582 21.5416 7.21728C21.5307 5.95873 21.0259 4.75483 20.1359 3.86487C19.246 2.97491 18.0421 2.4701 16.7835 2.45917C15.525 2.44823 14.3125 2.93204 13.4072 3.8064L11.6072 5.6064C11.4926 5.7171 11.4011 5.84951 11.3383 5.99592C11.2754 6.14232 11.2423 6.29978 11.2409 6.45912C11.2395 6.61846 11.2699 6.77647 11.3302 6.92395C11.3905 7.07142 11.4796 7.2054 11.5923 7.31808C11.705 7.43075 11.839 7.51985 11.9864 7.58019C12.1339 7.64052 12.2919 7.67089 12.4513 7.6695C12.6106 7.66812 12.7681 7.63501 12.9145 7.57212C13.0609 7.50923 13.1933 7.41781 13.304 7.3032L15.104 5.5032ZM9.10398 11.5032C9.55405 11.0533 10.1644 10.8005 10.8008 10.8005C11.4372 10.8005 12.0475 11.0533 12.4976 11.5032C12.6083 11.6178 12.7407 11.7092 12.8871 11.7721C13.0335 11.835 13.191 11.8681 13.3503 11.8695C13.5096 11.8709 13.6676 11.8405 13.8151 11.7802C13.9626 11.7199 14.0966 11.6307 14.2093 11.5181C14.3219 11.4054 14.411 11.2714 14.4714 11.1239C14.5317 10.9765 14.5621 10.8185 14.5607 10.6591C14.5593 10.4998 14.5262 10.3423 14.4633 10.1959C14.4004 10.0495 14.309 9.9171 14.1944 9.8064C13.2942 8.90654 12.0736 8.40103 10.8008 8.40103C9.52799 8.40103 8.30731 8.90654 7.40718 9.8064L3.80718 13.4064C3.34873 13.8492 2.98306 14.3788 2.73149 14.9645C2.47993 15.5501 2.34752 16.1799 2.34198 16.8173C2.33644 17.4546 2.45789 18.0867 2.69924 18.6766C2.94058 19.2665 3.297 19.8024 3.74768 20.2531C4.19837 20.7038 4.7343 21.0602 5.3242 21.3015C5.9141 21.5429 6.54617 21.6643 7.18351 21.6588C7.82085 21.6533 8.4507 21.5209 9.03632 21.2693C9.62194 21.0177 10.1516 20.6521 10.5944 20.1936L12.3944 18.3936C12.509 18.2829 12.6004 18.1505 12.6633 18.0041C12.7262 17.8577 12.7593 17.7002 12.7607 17.5409C12.7621 17.3815 12.7317 17.2235 12.6714 17.0761C12.611 16.9286 12.5219 16.7946 12.4093 16.6819C12.2966 16.5693 12.1626 16.4802 12.0151 16.4198C11.8677 16.3595 11.7096 16.3291 11.5503 16.3305C11.391 16.3319 11.2335 16.365 11.0871 16.4279C10.9407 16.4908 10.8083 16.5822 10.6976 16.6968L8.89758 18.4968C8.67619 18.726 8.41136 18.9089 8.11855 19.0346C7.82574 19.1604 7.51081 19.2266 7.19214 19.2294C6.87347 19.2322 6.55744 19.1714 6.26249 19.0508C5.96754 18.9301 5.69958 18.7519 5.47423 18.5266C5.24889 18.3012 5.07068 18.0332 4.95001 17.7383C4.82933 17.4433 4.76861 17.1273 4.77138 16.8086C4.77415 16.49 4.84036 16.175 4.96614 15.8822C5.09192 15.5894 5.27476 15.3246 5.50398 15.1032L9.10398 11.5032Z" fill="#3A75FF"/>
+                                        </svg>
+                                        <span >Скопировать реферальную ссылку</span>
+                                </a>
+                                <input type="hidden" class="copy-input" value="https://google.com">
+                            </div>
+                         
+                        </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="faq full-faq">
+            <div class="container">
+                <div class="faq__inner">
+                    <h3 class="faq-title h2-title">Часто задаваемые <b>вопросы</b></h3>
+                    <div class="accordion-container">
+
+
+                        <div class="ac">
+                          <h2 class="ac-header"  aria-expanded="false">
+                            <button type="button" class="ac-trigger">Что такое смена инвестиционного этапа?
+                            </button>
+                          </h2>
+                          <div class="ac-panel">
+                            <p class="ac-text">Это переход на новый этап реализации проекта. Смена этапа происходит, когда выполнены все задачи, которые были запланированы на текущем этапе. Процесс реализации проекта «Двигатели Дуюнова» разбит на 20 этапов. 1 января 2023 года начнётся новый, 18-й этап.</p>
+                          </div>
+                        </div>
+
+
+                        <div class="ac">
+                            <h2 class="ac-header" aria-expanded="false">
+                              <button type="button" class="ac-trigger">Когда происходит смена этапа?
+
+                              </button>
+                            </h2>
+                            <div class="ac-panel">
+                              <div class="ac-text">
+                                Смена этапа происходит, когда выполнены все задачи по реализации проекта, запланированные на текущем этапе, и проект переходит на новую стадию развития.
+                              </div>
+                            </div>
+                          </div>
+
+
+                        <div class="ac">
+                          <h2 class="ac-header" aria-expanded="false">
+                            <button type="button" class="ac-trigger">Почему инвестировать выгодно до смены этапа? 
+
+                            </button>
+                          </h2>
+                          <div class="ac-panel">
+                            <div class="ac-text">Чем ближе проект к завершению финансирования и к своей реализации, тем ниже риски для инвесторов. Поэтому с переходом на новый этап будет снижен дисконт на инвестиционные доли, а значит стоимость долей вырастет. Вот почему выгодно покупать доли до смены этапа.
+                            </div>
+                          </div>
+                        </div>
+
+                        
+                        <div class="ac">
+                            <h2 class="ac-header" aria-expanded="false">
+                              <button type="button" class="ac-trigger">Каковы достижения проекта на текущем 17-м этапе?
+                              </button>
+                            </h2>
+                            <div class="ac-panel">
+                              <div class="ac-text">
+                                17-й этап длился на протяжении всего 2022 года. За это время значительно продвинулось строительство ПКТБ «Совэлмаш»: от каркаса до здания с полностью закрытым тепловым контуром, бетонными полами, <br> межкомнатными перегородками. Компания «Совэлмаш» громко заявила о себе, представив свои новые разработки на МВТФ «Армия-2022». Создана компания, которая будет производить в Китае электроинструмент, разработанный в «Совэлмаш». Об этих и других достижениях этапа мы рассказывали по <a href="">ссылке</a>.
+                              </div>
+                            </div>
+                          </div>
+
+
+                          <div class="ac">
+                            <h2 class="ac-header" aria-expanded="false">
+                              <button type="button" class="ac-trigger">Как увеличить оплаченный пакет? 
+                              </button>
+                            </h2>
+                            <div class="ac-panel">
+                              <div class="ac-text">
+                                До 31 декабря включительно вы можете увеличить полностью оплаченный инвестиционный пакет. Все средства, которые были перечислены вами ранее для оплаты пакета, будут внесены в счёт оплаты увеличенного пакета. <br><br>
+                                1) В личном кабинете выберите пакет, который хотите увеличить, и номинал, до которого хотите увеличить. <br>
+                                2) Внесите недостающую для увеличения сумму, если это требуется. <br>
+                                3) Нажмите «Оформить пакет». Готово! Пакет увеличен.
+                              </div>
+                            </div>
+                          </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="example-popup-wrapper" data-popup-id="1">
+        <div class="example-popup-overlay"></div>
+        <div class="example-popup">
+            <div class="example-body">
+                <h4 class="example-popup-title">
+                    Пример
+                </h4>
+                <div class="example-popup-content">
+                    Вы оформили инвестиционный пакет номиналом 5&nbsp000$ в рассрочку на 20 месяцев на 5-м этапе и полностью оплатили его. В рамках акции вы увеличили пакет до номинала 7&nbsp500$ в рассрочку на 20 месяцев. По дисконту 5-го этапа он содержит 3&nbsp900&nbsp000 долей. Такой же пакет по дисконту 17-го этапа содержит 1&nbsp132&nbsp500 долей. Это почти в 4 раза меньше, чем по дисконту 5-го этапа.
+                </div> 
+            </div>
+
+            <a href="" class="example-close">Закрыть</a>
+        </div>
+    </div>
+
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.6.1.js"
+        integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"
+        integrity="sha512-uURl+ZXMBrF4AwGaWmEetzrd+J5/8NRkWAvJx5sbPSSuOb0bZLqf+tOzniObO00BjHa/dD7gub9oCGMLPQHtQA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/accordion-js@3.3.0/dist/accordion.min.js"></script>
+    <script src="js/libs.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        $('[data-fancybox="gallery"]').fancybox({
+           caption : function( instance, item ) {
+            return $(this).attr('title');
+          },
+          loop : true,
+        });
+    </script>
+</body>
+
+</html>

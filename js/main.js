@@ -227,6 +227,98 @@ document.addEventListener('DOMContentLoaded', function(){
           }
         }
         items.forEach(item => item.addEventListener('click', toggleAccordion));
+
+
+        document.querySelectorAll('.expand-button').forEach(item => {
+            item.addEventListener('click', function(e){
+                e.preventDefault();
+                if(item.classList.contains("hidden")){
+                    item.classList.remove("hidden");
+                    item.classList.add("open");
+                    let text = item.lastElementChild;
+                    text.innerText = "Свернуть";
+                     document.querySelectorAll('.video-block__content p').forEach(item => {
+                        item.classList.add("expanded");
+                      });
+                     document.querySelectorAll('.video-block__content').forEach(item => {
+                        item.classList.add("expanded");
+                      });
+                }else if(item.classList.contains("open")){
+                    item.classList.remove("open");
+                    item.classList.add("hidden");
+                    let text = item.lastElementChild;
+                    text.innerText = "Развернуть";
+                     document.querySelectorAll('.video-block__content p').forEach(item => {
+                        item.classList.remove("expanded");
+                      });
+                     document.querySelectorAll('.video-block__content').forEach(item => {
+                        item.classList.remove("expanded");
+                      });
+                }
+                
+            });
+        })
+
+
+        
+
+
+    var init = false;
+
+    function swiperCard() {
+      if (window.innerWidth <= 575) {
+        if (!init) {
+          init = true;
+           investSlider = new Swiper('.invest-slider', {
+            slidesPerView: 1,
+            slidesPerGroup: 1,
+            speed: 400,
+            spaceBetween: 0,
+            loop: true,
+            allowTouchMove: true,
+            wrapperClass: 'why-now-row',
+            slideClass: 'why-now-item',
+
+            // pagination: {
+            //     el: '.slider-pagination',
+            //     type: 'bullets',
+            //     clickable: true
+            // },
+            breakpoints:{
+                0:{
+                    slidesPerView: 1,
+                    slidesPerGroup: 1
+                },
+            },
+          });
+          investThumbs = new Swiper('.invest-thumbs', {
+          wrapperClass: 'invest-thumbs-wrapper',
+          slideClass: 'invest-thumb-slide',
+          centeredSlides: true,
+          slidesPerView: 3,
+          slideToClickedSlide: true,
+          loop: true,
+          loopedSlides: 1,
+          breakpoints:{
+                0:{
+                    slidesPerView: 2.2,
+                },
+                375:{
+                    slidesPerView: 3,
+                },
+            },
+        });
+        investThumbs.controller.control = investSlider;
+        investSlider.controller.control = investThumbs;
+        }
+      } else if (init) {
+        investSlider.destroy();
+        investThumbs.destroy();
+        init = false;
+      }
+    }
+    swiperCard();
+    window.addEventListener("resize", swiperCard);
 })
 
 
