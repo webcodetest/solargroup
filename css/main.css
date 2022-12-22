@@ -3069,11 +3069,12 @@ div.change-about-item{
 }
 .step-change.lottery .video-block .video{
   margin-right: 30px;
+  height: fit-content;
 }
 
 .step-change .video-block__content p{
   overflow-y: auto;
-  max-height: 363px;
+  max-height: 334px;
   padding-right: 20px;
 }
 .step-change .video-block__content p::-webkit-scrollbar{
@@ -3947,4 +3948,20 @@ div.change-about-item{
     margin-bottom: 15px;
   }
 
+}
+
+
+/*Правки*/
+@media(max-width: 768px){
+  .step-change.lottery .video-block .video iframe{
+    height: fit-content;
+    aspect-ratio: 16/9;
+  }
+  .step-change.lottery .video-block .video .preview{
+    height: fit-content;
+    aspect-ratio: 16/9;
+  }
+  .step-change .main-screen__content .timer{
+    left: 140px;
+  }
 }
